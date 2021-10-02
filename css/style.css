@@ -717,6 +717,10 @@ a, a:visited, a:hover {
   cursor: pointer;
 }
 
+.content .container .box img {
+  border-radius: 40px;
+}
+
 .content .container .box::after {
   content: "";
   position: absolute;
