@@ -30,7 +30,7 @@ hamburgerBtn.addEventListener("click", function(){
 })
 
 
-// 
+// changing the google map (Samobor - Zagreb)
 
 var locationButtonSamobor = document.querySelector("#samoborButton");
 var locationButtonZagreb = document.querySelector("#zagrebButton");
@@ -51,3 +51,37 @@ locationButtonZagreb.addEventListener("click", function() {
         locationButtonZagreb.classList.add("active");
         locationButtonSamobor.classList.remove("active");
     })
+
+
+
+/*
+    let instagramSocial = document.querySelector("#instagramSocial")
+    let linkedInSocial = document.querySelector("#linkedInSocial")
+    let facebookSocial = document.querySelector("#facebookSocial")
+*/
+
+// opening and closing the form for sending messages and dark overlay around it.
+
+    let poruka = document.querySelectorAll(".poruka");
+    let darkOverlay = document.querySelector(".darkOverlay")
+    let porukaForm = document.querySelector(".porukaForm")
+    let formCloseButton = document.querySelector(".formCloseButton")
+
+    poruka.forEach((poruka) => {
+        poruka.addEventListener('click', () => {
+            darkOverlay.style.display = "block";
+            porukaForm.style.display = "block";
+        });
+      });
+
+
+    darkOverlay.addEventListener("click", function() {
+        darkOverlay.style.display = "none";
+        porukaForm.style.display = "none";
+    })
+
+    formCloseButton.addEventListener("click", function() {
+        darkOverlay.style.display = "none";
+        porukaForm.style.display = "none";
+    })
+
