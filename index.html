@@ -34,7 +34,7 @@
             <li><a href="vozniPark.html">Vozni park</a></li>
            
         </ul>
-        <a class="mainCta hide-for-tablet" href="#">Prijavi se</a>
+        <a class="mainCta hide-for-tablet" href="#prijava">Prijavi se</a>
 
 
     </header>
@@ -59,7 +59,7 @@
                 <li><a href="oNama.html">O Nama</a></li>
                 <li><a href="kontakt.html">Kontakti</a></li>
                 <li><a href="vozniPark.html">Vozni park</a></li>
-                <li><a href="#">Prijavi se</a></li>
+                <li><a href="prijaviSe.html">Prijavi se</a></li>
             </ul>
         </div>
     </div>
@@ -74,8 +74,8 @@
         Perferendis, dolores! Itaque eveniet voluptate impedit nulla velit, modi sapiente vero recusandae sequi, necessitatibus accusamus dolores harum!
     </p>
     <div>
-        <a class="mainCta" href="#">Prijavi se</a>
-        <a class="altCta" href="#">Saznaj Više</a>
+        <a class="mainCta" href="#prijava">Prijavi se</a>
+        <a class="altCta" href="oNama.html">Saznaj Više</a>
     </div>
 </div>
 
@@ -137,7 +137,7 @@
             </div>
         </div>
     </div>
-    <a href="">    
+    <a href="oNama.html">    
             <button class="">
                 Saznaj više!
             </button>
@@ -148,6 +148,8 @@
         <path fill="#EFC319" class="hide-for-mobile" fill-opacity="1" d="M0,192L120,165.3C240,139,480,85,720,80C960,75,1200,117,1320,138.7L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
 </div>
 </div>
+<img src="slike/LineDevider.svg" alt="" class="devider">
+
 
 <div class="content">
 
@@ -164,7 +166,7 @@
             <img src="Slike/PeopleImg.png" alt="">
         </a>
 
-        <a class="box">
+        <a class="box" href="vozniPark.html">
             <div class="textOverlay"></div>
             <h2>Vozni Park</h2>
             <img src="Slike/CarImg.png" alt="">
@@ -172,7 +174,7 @@
     </div>
 </div>
 
-
+<img src="slike/LineDevider.svg" alt="" class="devider">
 <div class="content">
 
     <h1>NAĐITE NAS NA 
@@ -193,12 +195,47 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d177891.77679597988!2d15.824248265386561!3d45.84011036381783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d692c902cc39%3A0x3a45249628fbc28a!2sZagreb!5e0!3m2!1sen!2shr!4v1632937194434!5m2!1sen!2shr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         </div>
-        <a href="">
-            <button class="darkBtn">Javi nam se!
+
+            <button class="darkBtn poruka">Javi nam se!
 
             </button>
-        </a>
         
+</div>
+<div class="darkOverlay"></div>
+
+<div class="porukaForm">
+
+    <button class="formCloseButton">
+        <div class="formCloseButton__line formCloseButton__line--first"></div>
+    
+        <div class="formCloseButton__line formCloseButton__line--second"></div>
+    </button>
+
+    <h2>Pošalji nam poruku</h2>
+    <p class="porukaForm__phone"></p>
+
+    <form class="porukaForm__info" action="" method="POST">
+        <div class="formGroup">
+            <div>
+                <input type="text" placeholder="Ime i prezime" id="firstName" name="firstName">
+            </div>
+    
+            <div>
+                <input type="email" placeholder="E-mail" id="email" name="Email">
+            </div>
+            <div>
+                <input type="phoneNumber" placeholder="Broj mobitela" id="brojMobitela" name="brojMobitela">
+            </div>
+        </div>
+
+        <div class="formGroup">
+            <textarea name="message" placeholder="Poruka" id="" cols="20" rows="10"></textarea>
+        </div>   
+    </form>
+    <p>Naš Tim će ti odgovoriti u roku 24 sata!</p>
+    <a href=""><button class="mainCta">Pošalji</button></a>
+
+
 </div>
 
 
@@ -208,7 +245,7 @@
 </div>
 
 
-    <div class="prijava">
+    <div class="prijava" id="prijava">
 
         <div class="prijava__text">
             <h1>PRIJAVI SE</h1>
@@ -244,9 +281,9 @@
     <div class="footer__top">
         <div class="footer__top__leftSide">
             <ul class="links">
-                <li><a href="">Uvijeti korištenja</a></li>
-                <li><a href="">Pravilnik o radu</a></li>
-                <li><a href="">O nama</a></li>
+                <li><a href="uvjetiKoristenja.html">Uvijeti korištenja</a></li>
+                <li><a href="pravilnikORadu.html">Pravilnik o radu</a></li>
+                <li><a href="oNama.html">O nama</a></li>
             </ul>
             <ul class="dodatniLinkovi">
                 <li><a href="">Dodatan link 1</a></li>
@@ -258,21 +295,22 @@
         <div class="footer__top__rightSide">
             <ul class="info">
                 <li class="dodatniLinkovi">
-                    <a href="" >
+                    <a href="https://www.google.com/maps/place/Ul.+bana+Josipa+Jela%C4%8Di%C4%87a+13,+10430,+Samobor/data=!4m2!3m1!1s0x4765cbf91024edfb:0xdd597de5a7063467?sa=X&ved=2ahUKEwjysNHrgcXzAhUHHxoKHdODCRUQ8gF6BAgUEAE" target=”_blank” >
                         <img src="Slike/LocationIcon.svg" alt="">
+                        
                         <span>Josipa Jelačića 13</span>
                      </a>
                 </li>
 
                 <li>
-                    <a href="">
+                    <a href="https://wa.me/385913311806" target=”_blank”>
                         <img src="Slike/PhoneIcon.svg" alt="">
                         <span>+385 20 933 933</span> 
                     </a>
                 </li>
 
                 <li>
-                    <a href="">
+                    <a href="mailto:reveinfo@gmail.com" target=”_blank”>
                         <img src="Slike/MailIcon.svg" alt="">
                         <span>reveinfo@gmail.com</span>   
                     </a>
@@ -306,7 +344,8 @@
 </footer>
 
 
-
+<script src="prijava.js"></script>
 <script src="script.js"></script>
+<script src="location.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   --fs: (3rem, 8vw + 1rem, 5rem);
   --fs-600: 3.5rem;
   --fs-500: 2.3rem;
-  --fs-400:1.55rem;
+  --fs-400:1.4rem;
   --fs-300:1.2rem;
 }
 
@@ -13,7 +13,7 @@
   :root {
     --fs-600: 2.5rem;
     --fs-500: 2rem;
-    --fs-400:1.3rem;
+    --fs-400:1.2rem;
     --fs-300:0.8rem;
   }
 }
@@ -22,7 +22,7 @@
   :root {
     --fs-600: 2.1rem;
     --fs-500: 1.7rem;
-    --fs-400:1.2rem;
+    --fs-400:1.1rem;
     --fs-300:0.7rem;
   }
 }
@@ -186,6 +186,23 @@ a, a:visited, a:hover {
   background-color: rgba(0, 0, 0, 0.474);
   z-index: 4;
   display: none;
+}
+
+.devider {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 39.9375em) {
+  .devider {
+    display: none;
+  }
+}
+
+#deviderLine {
+  margin-top: 50px;
 }
 
 .backgroundAnimation {
@@ -956,6 +973,33 @@ a, a:visited, a:hover {
   }
 }
 
+.linesOnSide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+}
+
+.linesOnSide:before, .linesOnSide:after {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 3px;
+  content: "";
+  background-color: black;
+}
+
+.linesOnSide:before {
+  margin-right: 125px;
+}
+
+.linesOnSide:after {
+  margin-left: 125px;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -1388,8 +1432,9 @@ header ul .active::after {
   }
 }
 
-.porukaForm {
-  width: 65%;
+.porukaForm,
+.prijavaForm {
+  width: 50%;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1398,23 +1443,71 @@ header ul .active::after {
   text-align: center;
   background-color: #F8F8F8;
   border-radius: 30px;
-  padding: 4rem 2rem;
+  padding: 3.5rem 1.8rem;
   z-index: 5;
   -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.226);
           box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.226);
   display: none;
 }
 
+@media (max-width: 63.9375em) {
+  .porukaForm,
+  .prijavaForm {
+    width: 80%;
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .porukaForm,
+  .prijavaForm {
+    width: 90%;
+    padding: 4rem 0rem 2rem 0;
+  }
+}
+
+.porukaForm input, .porukaForm textarea,
+.prijavaForm input,
+.prijavaForm textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid gray;
+  color: #383838;
+  font-style: italic;
+  border-radius: 10px;
+  font-size: var(--fs-300);
+  vertical-align: center;
+}
+
+.porukaForm .mainCta,
+.prijavaForm .mainCta {
+  min-width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.8rem;
+}
+
+@media (max-width: 39.9375em) {
+  .porukaForm .mainCta,
+  .prijavaForm .mainCta {
+    width: 60%;
+    display: block;
+  }
+}
+
 .porukaForm h2 {
-  margin-bottom: 3rem;
+  margin-bottom: 2.8rem;
   font-weight: 300;
   font-size: var(--fs-500);
   font-style: italic;
 }
 
 .porukaForm p {
-  margin: 2.4rem 0;
+  margin: 2rem 0;
   font-weight: 200;
+  font-size: var(--fs-300);
 }
 
 .porukaForm__info {
@@ -1426,28 +1519,78 @@ header ul .active::after {
           justify-content: space-evenly;
 }
 
+@media (max-width: 39.9375em) {
+  .porukaForm__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .porukaForm__info .formGroup {
   width: 40%;
 }
 
-.porukaForm input, .porukaForm textarea {
-  width: 100%;
-  padding: 0.7rem;
-  border: 1px solid gray;
-  color: #383838;
-  font-style: italic;
-  border-radius: 10px;
-  font-size: var(--fs-300);
-  vertical-align: center;
+@media (max-width: 39.9375em) {
+  .porukaForm__info .formGroup {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .porukaForm input {
+    margin-bottom: 1rem;
+  }
 }
 
 .porukaForm input#firstName, .porukaForm input#email {
-  margin-bottom: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 39.9375em) {
+  .porukaForm input#firstName, .porukaForm input#email {
+    margin-bottom: 1rem;
+  }
 }
 
 .porukaForm textarea {
   resize: vertical;
-  height: 85%;
+}
+
+.prijavaForm {
+  width: 50%;
+  padding: 3rem 0rem;
+  border: 1px solid rgba(0, 0, 0, 0.247);
+}
+
+.prijavaForm__form {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 39.9375em) {
+  .prijavaForm__form {
+    width: 85%;
+  }
+}
+
+.prijavaForm h1 {
+  text-align: center;
+  font-size: var(--fs-500);
+  line-height: 1.35;
+  letter-spacing: 5;
+  font-weight: 200;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.418);
+  color: #0B0B0B;
+}
+
+.prijavaForm p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .formCloseButton {
@@ -1457,10 +1600,10 @@ header ul .active::after {
   /* Cursor */
   cursor: pointer;
   /* Size */
-  height: 32px;
-  width: 32px;
-  top: 1.5rem;
-  left: 1.5rem;
+  height: 24px;
+  width: 24px;
+  top: 1.2rem;
+  left: 1.2rem;
   /* Used to position the inner */
   position: absolute;
 }
@@ -1521,7 +1664,7 @@ footer .footerlogo {
 @media (max-width: 39.9375em) {
   footer .footerlogo {
     display: block;
-    width: 10rem;
+    width: 8rem;
     left: auto;
     right: auto;
   }
@@ -1555,13 +1698,23 @@ footer ul li {
   font-size: var(--fs-300);
 }
 
+footer ul li:hover a {
+  color: #EFC319;
+}
+
+footer ul li:hover img {
+  -webkit-filter: invert(92%) sepia(21%) saturate(3347%) hue-rotate(344deg) brightness(97%) contrast(94%);
+          filter: invert(92%) sepia(21%) saturate(3347%) hue-rotate(344deg) brightness(97%) contrast(94%);
+}
+
 footer ul li a {
   text-decoration: none;
   color: white;
 }
 
-footer ul li a:hover {
-  color: #EFC319;
+footer ul li a img {
+  -webkit-filter: invert(87%) sepia(17%) saturate(22%) hue-rotate(274deg) brightness(123%) contrast(74%);
+          filter: invert(87%) sepia(17%) saturate(22%) hue-rotate(274deg) brightness(123%) contrast(74%);
 }
 
 footer ul li span {
@@ -1683,6 +1836,16 @@ footer .footer__bottom .socials {
           justify-content: left;
 }
 
+footer .footer__bottom .socials img {
+  -webkit-filter: invert(87%) sepia(17%) saturate(22%) hue-rotate(274deg) brightness(123%) contrast(74%);
+          filter: invert(87%) sepia(17%) saturate(22%) hue-rotate(274deg) brightness(123%) contrast(74%);
+}
+
+footer .footer__bottom .socials img:hover {
+  -webkit-filter: invert(92%) sepia(21%) saturate(3347%) hue-rotate(344deg) brightness(97%) contrast(94%);
+          filter: invert(92%) sepia(21%) saturate(3347%) hue-rotate(344deg) brightness(97%) contrast(94%);
+}
+
 @media (max-width: 39.9375em) {
   footer .footer__bottom .socials {
     -webkit-box-pack: center;
@@ -1738,14 +1901,13 @@ footer .footer__bottom .copyright {
   display: flex;
   margin: 10rem 8rem 15rem 8rem;
   color: #0B0B0B;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 @media (max-width: 63.9375em) {
   .heroContainer {
-    margin: 10rem 3rem 12rem 3rem;
+    margin: 10rem 4rem 12rem 4rem;
   }
 }
 
@@ -1760,7 +1922,7 @@ footer .footer__bottom .copyright {
 }
 
 .heroContainer__text {
-  width: 45%;
+  width: 42%;
 }
 
 @media (max-width: 39.9375em) {
@@ -1817,6 +1979,12 @@ footer .footer__bottom .copyright {
   }
 }
 
+@media only screen and (max-width: 360px) {
+  .heroContainer__text h1 {
+    margin-top: -2rem;
+  }
+}
+
 .heroContainer__text p {
   font-size: var(--fs-300);
   font-weight: 300;
@@ -1838,7 +2006,7 @@ footer .footer__bottom .copyright {
 }
 
 .heroContainer .heroContainerImage {
-  width: 50%;
+  width: 45%;
 }
 
 .heroContainer__image {
@@ -1892,7 +2060,13 @@ footer .footer__bottom .copyright {
 
 @media (max-width: 39.9375em) {
   .content .headerContent {
-    padding-top: 2rem;
+    padding-top: 4rem;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .content .headerContent {
+    padding-top: 0;
   }
 }
 
@@ -2089,6 +2263,12 @@ footer .footer__bottom .copyright {
           flex-direction: column;
 }
 
+@media (max-width: 63.9375em) {
+  .carouselSection {
+    padding: 3rem 2rem;
+  }
+}
+
 .carouselSection .containerForCarousel {
   margin-left: auto;
   margin-right: auto;
@@ -2099,24 +2279,52 @@ footer .footer__bottom .copyright {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 6rem 0;
+  width: 100%;
+}
+
+@media (max-width: 63.9375em) {
+  .carouselSection .textSection {
+    padding: 4rem 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
 }
 
 .carouselSection .textSection h1 {
-  width: 20%;
+  width: 30%;
   font-size: var(--fs-600);
   font-weight: 300;
   font-style: italic;
+  margin-top: 0;
+}
+
+@media (max-width: 63.9375em) {
+  .carouselSection .textSection h1 {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 
 .carouselSection .textSection p {
-  line-height: 2;
+  line-height: 1.8;
   font-size: var(--fs-400);
-  width: 60%;
-  margin-left: 5rem;
+  width: 65%;
+  margin-left: 2rem;
+}
+
+@media (max-width: 63.9375em) {
+  .carouselSection .textSection p {
+    margin-left: 0rem;
+    width: 100%;
+    font-size: var(--fs-300);
+  }
 }
 
 .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
@@ -2144,5 +2352,37 @@ footer .footer__bottom .copyright {
   top: 50%;
   left: -80px;
   margin-top: -40px;
+}
+
+.uvjetiHeader {
+  text-align: center;
+  margin: 14rem 8rem 6rem 8rem;
+  font-size: var(--fs-500);
+}
+
+.uvjetiKoristenjaContent {
+  padding: 2rem 8rem;
+  text-align: center;
+}
+
+@media (max-width: 63.9375em) {
+  .uvjetiKoristenjaContent {
+    padding: 2rem 6rem;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .uvjetiKoristenjaContent {
+    padding: 2rem 4rem;
+  }
+}
+
+.uvjetiKoristenjaContent h3 {
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.lastDiv {
+  margin-bottom: 5rem;
 }
 /*# sourceMappingURL=style.css.map */

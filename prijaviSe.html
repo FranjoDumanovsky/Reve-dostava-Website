@@ -18,7 +18,7 @@
 <!-- DESKTOP NAVIGATION-->
 
     <header>
-        <a href="index.html"><img src="Slike/LogoYellow.svg" class="logo" alt=""></a>
+        <a href="#"><img src="Slike/LogoYellow.svg" class="logo" alt=""></a>
         <ul class="hide-for-tablet">
             <li><a href="index.html">Početna</a></li>
             <li><a href="oNama.html">O Nama</a></li>
@@ -56,131 +56,36 @@
         </div>
     </div>
 
-    <div class="darkOverlay"></div>
 
-    <div class="heroContainer">
-        <div class="heroContainer__text">
-            <h1 class="velikiEkran">JAVITE NAM SE!
-                </h1>
+    <div class="prijava" id="prijava">
 
-                <h1 class="maliEkran">JAVITE NAM SE!
-                    </h1>
-    
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Sed finibus augue quis purus gravida, ut volutpat magna lobortis.
-                Pellentesque pulvinar ultrices ligula varius egestas. </p>
-    
-                <button class="mainCta poruka">Pošalji poruku</button>
-        </div>
-        <div class="heroContainerImage">
-            <div class="heroContainer__image">
-                <img src="Slike/kontaktPageImg.svg" alt="">
-            </div>
+        <div class="prijava__text">
+            <h1>PRIJAVI SE</h1>
+            <h5>U samo dvije minute!</h5>
+            <p>Lorem ipsum dolor sit amet,
+                 consectetur <br>adipiscing elit. Sed finibus augue quis <br>
+                  purus gravida.</p>
+            </p>
         </div>
 
-    </div> 
-
-
-
-<div class="porukaForm">
-
-    <button class="formCloseButton">
-        <div class="formCloseButton__line formCloseButton__line--first"></div>
-    
-        <div class="formCloseButton__line formCloseButton__line--second"></div>
-    </button>
-
-    <h2>Pošalji nam poruku</h2>
-
-    <form class="porukaForm__info" action="" method="POST">
-        <div class="formGroup">
-            <div>
+        <form class="prijava__form" action="" method="POST">
+            <div class="formGroup">
                 <input type="text" placeholder="Ime i prezime" id="firstName" name="firstName">
             </div>
-    
-            <div>
+
+            <div class="formGroup">
                 <input type="email" placeholder="E-mail" id="email" name="Email">
             </div>
-            <div>
-                <input type="phoneNumber" placeholder="Broj mobitela" id="brojMobitela" name="brojMobitela">
+
+            <div class="formGroup">
+                <textarea name="message" placeholder="Poruka" id="" cols="20" rows="10"></textarea>
             </div>
-        </div>
+            <a href=""><button class="mainCta">Prijavi se</button></a>
+        </form>
 
-        <div class="formGroup">
-            <textarea name="message" placeholder="Poruka" id="" cols="20" rows="8"></textarea>
-        </div>   
-    </form>
-    <p>Naš Tim će ti odgovoriti u roku 24 sata!</p>
-    <a href=""><button class="mainCta">Pošalji</button></a>
-
-
-</div>
-
-
-
-
-
-    <div class="content">
-
-        <h1 class="headerContent">NAĐITE NAS NA 
-           <br>LOKACIJI</br></h1>
-    
-            <div class="locationButtons">
-                <button class="locButton" id="samoborButton">SAMOBOR</button>
-                <hr>
-    
-                <button class="locButton active" id="zagrebButton">ZAGREB</button>
-            </div>
-    
-            <div class="map">
-            <div id="samoborMap"> 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89004.46456508526!2d15.638116497264134!3d45.80345690383869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765cade0a424095%3A0x400ad50862bb750!2sSamobor!5e0!3m2!1sen!2shr!4v1632937053299!5m2!1sen!2shr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <div id="zagrebMap"> 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d177891.77679597988!2d15.824248265386561!3d45.84011036381783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d692c902cc39%3A0x3a45249628fbc28a!2sZagreb!5e0!3m2!1sen!2shr!4v1632937194434!5m2!1sen!2shr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            </div>
-   
-                <button class="darkBtn poruka">Javi nam se!
-    
-                </button>
-                        
     </div>
 
-
-
-<div class="prijavaForm">
-
-    <button class="formCloseButton">
-        <div class="formCloseButton__line formCloseButton__line--first"></div>
-    
-        <div class="formCloseButton__line formCloseButton__line--second"></div>
-    </button>
-
-    <h1>PRIJAVI SE</h1>
-    <p>U samo 2 minute</p>
-
-    <form class="prijavaForm__form" action="" method="POST">
-        <div class="formGroup">
-            <input type="text" placeholder="Ime i prezime" id="firstName" name="firstName">
-        </div>
-
-        <div class="formGroup">
-            <input type="email" placeholder="E-mail" id="email" name="Email">
-        </div>
-
-        <div class="formGroup">
-            <textarea name="message" placeholder="Poruka" id="" cols="20" rows="6"></textarea>
-        </div>
-        <a href=""><button class="mainCta">Prijavi se</button></a>
-    </form>
-
-
 </div>
-    
-    
-    
-
 
 <footer class="footer">
     <img src="Slike/LogoReve-sivaSlova.svg" class="footerLogo" alt="">
@@ -250,8 +155,7 @@
 
 </footer>
 
-    <script src="prijava.js"></script>
-    <script src="script.js"></script>
-    <script src="location.js"></script>
-
+<script src="script.js"></script>
     </body>
+    </html>
+    
