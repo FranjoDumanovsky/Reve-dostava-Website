@@ -980,24 +980,29 @@ a, a:visited, a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: black;
+  color: #0B0B0B;
 }
 
 .linesOnSide:before, .linesOnSide:after {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 3px;
+  height: 2px;
   content: "";
-  background-color: black;
+  background-color: #0B0B0B;
 }
 
 .linesOnSide:before {
-  margin-right: 125px;
+  margin-right: 75px;
 }
 
 .linesOnSide:after {
-  margin-left: 125px;
+  margin-left: 75px;
+}
+
+.prijaviSeContainer {
+  width: 100%;
+  padding-top: 7vh;
 }
 
 header {
@@ -1972,10 +1977,17 @@ footer .footer__bottom .copyright {
   position: relative;
 }
 
+@media (max-width: 63.9375em) {
+  .heroContainer__text h1 {
+    font-size: var(--fs-500);
+  }
+}
+
 @media (max-width: 39.9375em) {
   .heroContainer__text h1 {
     color: white;
     font-weight: 400;
+    margin-bottom: 0;
   }
 }
 
@@ -2356,7 +2368,7 @@ footer .footer__bottom .copyright {
 
 .uvjetiHeader {
   text-align: center;
-  margin: 14rem 8rem 6rem 8rem;
+  margin: 9rem 8rem 6rem 8rem;
   font-size: var(--fs-500);
 }
 
