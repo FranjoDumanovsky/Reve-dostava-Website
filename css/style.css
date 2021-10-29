@@ -961,15 +961,22 @@ a, a:visited, a:hover {
 
 .linije img {
   position: absolute;
-  width: 80%;
+  width: 100%;
   left: -550px;
-  top: -400px;
+  top: -470px;
+  opacity: 0.75;
 }
 
 @media (max-width: 63.9375em) {
   .linije img {
-    top: -120px;
-    left: -150px;
+    top: -190px;
+    left: -350px;
+  }
+}
+
+@media only screen and (min-width: 2200px) {
+  .linije img {
+    display: none;
   }
 }
 
@@ -1311,7 +1318,7 @@ header ul .active::after {
 }
 
 .prijava {
-  padding: 20vh 10vw 15vh 10vw;
+  padding: 20vh 10vw 20vh 10vw;
   background-color: #D9D9D9;
   position: relative;
   display: -webkit-box;
@@ -1610,6 +1617,63 @@ header ul .active::after {
 .prijavaForm p {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+#statusPrijave {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  font-style: italic;
+  padding: 10px 55px;
+  border-radius: 10px;
+  display: none;
+}
+
+#statusPrijave.success {
+  background-color: rgba(126, 126, 126, 0.63);
+  color: white;
+  -webkit-animation: status 4s ease forwards;
+          animation: status 4s ease forwards;
+}
+
+#statusPrijave.error {
+  background-color: rgba(231, 36, 36, 0.671);
+  color: white;
+  -webkit-animation: status 4s ease forwards;
+          animation: status 4s ease forwards;
+}
+
+@-webkit-keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .formCloseButton {

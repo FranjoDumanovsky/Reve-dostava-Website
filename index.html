@@ -70,8 +70,8 @@
 <div class="banner">
     <h1>POSTANI REVE</h1>
     <h1 id="yellowText">VOZAČ</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ad aliquid fugit esse. 
-        Perferendis, dolores! Itaque eveniet voluptate impedit nulla velit, modi sapiente vero recusandae sequi, necessitatibus accusamus dolores harum!
+    <p>Prijavi se i postani Reve dostavljač! Vozi svoje vozilo ili odaberi nešto iz naše flote, dostavljaj na
+        puno radno vrijeme ili kao dodatan posao - ti biraš!
     </p>
     <div>
         <a class="mainCta" href="#prijava">Prijavi se</a>
@@ -244,7 +244,7 @@
     <img src="Slike/Linije.svg" alt="">
 </div>
 
-
+<div>
     <div class="prijava" id="prijava">
 
         <div class="prijava__text">
@@ -256,9 +256,9 @@
             </p>
         </div>
 
-        <form class="prijava__form" action="" method="POST">
+        <form class="prijava__form" action="https://formspree.io/xdoyvbbr" method="POST">
             <div class="formGroup">
-                <input type="text" placeholder="Ime i prezime" id="firstName" name="firstName">
+                <input type="text" placeholder="Ime i prezime" id="name" name="firstName">
             </div>
 
             <div class="formGroup">
@@ -266,14 +266,18 @@
             </div>
 
             <div class="formGroup">
-                <textarea name="message" placeholder="Poruka" id="" cols="20" rows="10"></textarea>
+                <textarea name="message" placeholder="Poruka" id="message" cols="20" rows="10"></textarea>
             </div>
-            <a href=""><button class="mainCta">Prijavi se</button></a>
+            <a href=""><button id="signButton" class="mainCta">Prijavi se</button></a>
         </form>
 
+        <div id="statusPrijave"></div>
+        
     </div>
 
+   
 </div>
+
 
 <footer class="footer">
     <img src="Slike/LogoReve-sivaSlova.svg" class="footerLogo" alt="">
@@ -347,5 +351,7 @@
 <script src="prijava.js"></script>
 <script src="script.js"></script>
 <script src="location.js"></script>
+
+<script src="form.js"></script>
 </body>
 </html>
