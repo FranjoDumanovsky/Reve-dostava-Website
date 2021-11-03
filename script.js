@@ -3,8 +3,6 @@ var mobileMenuBackground = document.querySelector(".backgroundMobileMenu")
 var mobileNav = document.querySelector(".mobileNav")
 
 
-
-
 // adds sticky class to header, and scrolled class to hamburger menu button
 
 window.addEventListener("scroll", function(){
@@ -22,11 +20,11 @@ hamburgerBtn.addEventListener("click", function(){
     if (hamburgerBtn.classList.contains("isActive")){
         mobileMenuBackground.style.display = "flex";
         mobileNav.style.display ="block";
-    } else {
+    } 
+    else {
         mobileMenuBackground.style.display = "none";
         mobileNav.style.display = "none";
     }
-    
 })
 
 
