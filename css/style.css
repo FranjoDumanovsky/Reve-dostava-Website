@@ -183,7 +183,7 @@ a, a:visited, a:hover {
   left: 0;
   width: 100vw;
   height: 500vh;
-  background-color: rgba(0, 0, 0, 0.474);
+  background-color: rgba(0, 0, 0, 0.624);
   z-index: 4;
   display: none;
 }
@@ -203,6 +203,26 @@ a, a:visited, a:hover {
 
 #deviderLine {
   margin-top: 50px;
+}
+
+#paragraph {
+  margin-top: 0rem;
+  margin-bottom: 15rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#paragraph h1 {
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+#paragraph p {
+  line-height: 1.7;
+  font-size: var(--fs-300);
+  font-style: italic;
 }
 
 .backgroundAnimation {
@@ -1023,7 +1043,13 @@ a, a:visited, a:hover {
 
 .prijaviSeContainer {
   width: 100%;
-  padding-top: 7vh;
+  padding-top: 15vh;
+}
+
+@media (max-width: 39.9375em) {
+  .prijaviSeContainer {
+    padding-top: 10vh;
+  }
 }
 
 header {
@@ -1318,335 +1344,161 @@ header ul .active::after {
 }
 
 .prijava {
-  padding: 20vh 10vw 20vh 10vw;
+  text-align: center;
+  padding: 3rem 2rem;
   background-color: #D9D9D9;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
 }
 
-@media (max-width: 63.9375em) {
+.prijava.poseban {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+@media (min-width: 40em) {
   .prijava {
-    padding: 15vh 1.5rem 15vh 1.5rem;
+    padding: 3rem 2rem;
   }
 }
 
-@media (max-width: 39.9375em) {
+@media (min-width: 64em) {
   .prijava {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 7rem 3.7rem;
+    text-align: left;
   }
-}
-
-.prijava__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 50%;
-}
-
-@media (max-width: 63.9375em) {
-  .prijava__text {
-    width: 45%;
-  }
-}
-
-@media (max-width: 39.9375em) {
-  .prijava__text {
-    width: 100%;
-  }
-}
-
-.prijava__text h1, .prijava__text h5, .prijava__text p {
-  text-align: left;
-  margin-bottom: 40px;
-}
-
-@media (max-width: 39.9375em) {
-  .prijava__text h1, .prijava__text h5, .prijava__text p {
+  .prijava.poseban {
+    display: block;
+    padding: 3rem 2rem;
     text-align: center;
   }
 }
 
-.prijava__text h1 {
-  font-size: var(--fs-lg);
+.prijava h1, .prijava h5, .prijava p {
+  margin-bottom: 1.2rem 0;
+}
+
+@media (min-width: 64em) {
+  .prijava h1, .prijava h5, .prijava p {
+    margin-bottom: 2rem;
+  }
+}
+
+.prijava h1 {
+  font-size: var(--fs-600);
   line-height: 1.35;
-  letter-spacing: 5;
   font-weight: 300;
 }
 
-.prijava__text h5 {
-  font-style: italic;
+@media (min-width: 64em) {
+  .prijava h5, .prijava p {
+    margin-left: 6px;
+  }
+}
+
+.prijava button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.prijava p {
+  font-size: var(--fs-300);
   font-weight: 300;
-  font-size: var(--fs-400);
-  color: #383838;
+  line-height: 1.6;
 }
 
-.prijava__text p {
-  font-style: italic;
-  font-weight: 100;
-}
-
-.prijava__form {
-  width: 40%;
-}
-
-@media (max-width: 63.9375em) {
-  .prijava__form {
-    width: 45%;
+@media (min-width: 64em) {
+  .prijava p {
+    width: 80%;
   }
 }
 
-@media (max-width: 39.9375em) {
-  .prijava__form {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+.prijava form {
+  padding-top: 1rem;
+}
+
+@media (min-width: 64em) {
+  .prijava form {
+    width: 40%;
   }
 }
 
-.prijava__form .formGroup {
-  width: 100%;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.226);
-          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.226);
+.form-group label {
+  display: block;
 }
 
-.prijava__form .formGroup input, .prijava__form .formGroup textarea {
+.form-group input, .form-group textarea {
   width: 100%;
-  padding: 0.8rem;
+  margin: 0.25rem 0;
+  padding: 0.5rem;
   padding-left: 15px;
   border: 1px solid gray;
-  color: #383838;
   font-style: italic;
   border-radius: 10px;
   text-transform: uppercase;
+  -webkit-box-shadow: 0px 0px 1px #2c2c2c;
+          box-shadow: 0px 0px 1px #2c2c2c;
 }
 
-@media (max-width: 63.9375em) {
-  .prijava__form .formGroup input, .prijava__form .formGroup textarea {
-    padding: 0.5rem;
-    padding-left: 0.8rem;
-  }
-}
-
-.prijava__form .formGroup textarea {
+.form-group textarea {
   resize: vertical;
 }
 
-@media (max-width: 39.9375em) {
-  .prijava .mainCta {
-    width: 60%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+input.invalid {
+  border: 1px solid red;
+}
+
+.error-hint {
+  color: red;
+  font-style: italic;
+  font-size: var(--fs-300);
+  text-align: left;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 40em) {
+  .prijava.poseban form {
+    width: 100%;
   }
 }
 
-.porukaForm,
 .prijavaForm {
-  width: 50%;
+  width: 100%;
+  height: 86%;
   position: fixed;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-align: center;
   background-color: #F8F8F8;
-  border-radius: 30px;
-  padding: 3.5rem 1.8rem;
+  border-radius: 20px;
   z-index: 5;
   -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.226);
-          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.226);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.226);
   display: none;
+  opacity: 0.96;
 }
 
-@media (max-width: 63.9375em) {
-  .porukaForm,
+@media (min-width: 40em) {
   .prijavaForm {
-    width: 80%;
-    padding: 3rem 1rem;
+    width: 70%;
   }
 }
 
-@media (max-width: 39.9375em) {
-  .porukaForm,
-  .prijavaForm {
-    width: 90%;
-    padding: 4rem 0rem 2rem 0;
-  }
+.success-message {
+  opacity: 1;
+  -webkit-animation: statusSuccess 2s ease forwards;
+          animation: statusSuccess 2s ease forwards;
 }
 
-.porukaForm input, .porukaForm textarea,
-.prijavaForm input,
-.prijavaForm textarea {
-  width: 100%;
-  padding: 0.6rem;
-  margin-top: 0.8rem;
-  margin-bottom: 0.8rem;
-  border: 1px solid gray;
-  color: #383838;
-  font-style: italic;
-  border-radius: 10px;
-  font-size: var(--fs-300);
-  vertical-align: center;
-}
-
-.porukaForm .mainCta,
-.prijavaForm .mainCta {
-  min-width: 40%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0.8rem;
-}
-
-@media (max-width: 39.9375em) {
-  .porukaForm .mainCta,
-  .prijavaForm .mainCta {
-    width: 60%;
-    display: block;
-  }
-}
-
-.porukaForm h2 {
-  margin-bottom: 2.8rem;
-  font-weight: 300;
-  font-size: var(--fs-500);
-  font-style: italic;
-}
-
-.porukaForm p {
-  margin: 2rem 0;
-  font-weight: 200;
-  font-size: var(--fs-300);
-}
-
-.porukaForm__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-@media (max-width: 39.9375em) {
-  .porukaForm__info {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-.porukaForm__info .formGroup {
-  width: 40%;
-}
-
-@media (max-width: 39.9375em) {
-  .porukaForm__info .formGroup {
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media (max-width: 39.9375em) {
-  .porukaForm input {
-    margin-bottom: 1rem;
-  }
-}
-
-.porukaForm input#firstName, .porukaForm input#email {
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 39.9375em) {
-  .porukaForm input#firstName, .porukaForm input#email {
-    margin-bottom: 1rem;
-  }
-}
-
-.porukaForm textarea {
-  resize: vertical;
-}
-
-.prijavaForm {
-  width: 50%;
-  padding: 3rem 0rem;
-  border: 1px solid rgba(0, 0, 0, 0.247);
-}
-
-.prijavaForm__form {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width: 39.9375em) {
-  .prijavaForm__form {
-    width: 85%;
-  }
-}
-
-.prijavaForm h1 {
-  text-align: center;
-  font-size: var(--fs-500);
-  line-height: 1.35;
-  letter-spacing: 5;
-  font-weight: 200;
-  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.418);
-  color: #0B0B0B;
-}
-
-.prijavaForm p {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-#statusPrijave {
-  position: absolute;
-  bottom: 3%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  text-align: center;
-  font-style: italic;
-  padding: 10px 55px;
-  border-radius: 10px;
-  display: none;
-}
-
-#statusPrijave.success {
-  background-color: rgba(126, 126, 126, 0.63);
-  color: white;
-  -webkit-animation: status 4s ease forwards;
-          animation: status 4s ease forwards;
-}
-
-#statusPrijave.error {
-  background-color: rgba(231, 36, 36, 0.671);
-  color: white;
-  -webkit-animation: status 4s ease forwards;
-          animation: status 4s ease forwards;
-}
-
-@-webkit-keyframes status {
+@-webkit-keyframes statusSuccess {
   0% {
     opacity: 1;
     pointer-events: all;
@@ -1661,7 +1513,7 @@ header ul .active::after {
   }
 }
 
-@keyframes status {
+@keyframes statusSuccess {
   0% {
     opacity: 1;
     pointer-events: all;
@@ -1706,7 +1558,7 @@ header ul .active::after {
   left: 0px;
   top: 50%;
   -webkit-transform: translate(0%, -50%) rotate(45deg);
-          transform: translate(0%, -50%) rotate(45deg);
+  transform: translate(0%, -50%) rotate(45deg);
   /* Size */
   height: 1px;
   width: 100%;
@@ -1717,7 +1569,7 @@ header ul .active::after {
   left: 50%;
   top: 0px;
   -webkit-transform: translate(-50%, 0%) rotate(45deg);
-          transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
   /* Size */
   height: 100%;
   width: 1px;
@@ -1725,7 +1577,7 @@ header ul .active::after {
 
 footer {
   background-color: #58595B;
-  padding: 8rem 6rem 0.5rem 6rem;
+  padding: 8rem 7rem 0.5rem 7rem;
   font-weight: 200;
   font-size: var(--fs-300);
   color: #DADADA;
@@ -1733,7 +1585,13 @@ footer {
 
 @media (max-width: 63.9375em) {
   footer {
-    padding: 4rem 4rem 4rem 4rem;
+    padding: 4rem;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  footer {
+    padding: 2rem;
   }
 }
 
@@ -1765,12 +1623,6 @@ footer .adresa {
     display: block;
     font-size: var(--fs-400);
     text-align: center;
-  }
-}
-
-@media (max-width: 63.9375em) {
-  footer {
-    padding: 6vh 6vh 2vh 6vh;
   }
 }
 
@@ -1982,7 +1834,7 @@ footer .footer__bottom .copyright {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 10rem 8rem 15rem 8rem;
+  margin: 12rem 8rem 15rem 8rem;
   color: #0B0B0B;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -2051,7 +1903,7 @@ footer .footer__bottom .copyright {
   text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.418);
   color: #0B0B0B;
   z-index: 2;
-  margin-bottom: 2.2rem;
+  margin-bottom: 2.5rem;
   position: relative;
 }
 
@@ -2078,7 +1930,8 @@ footer .footer__bottom .copyright {
 .heroContainer__text p {
   font-size: var(--fs-300);
   font-weight: 300;
-  margin-bottom: 2.2rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
 }
 
 @media (max-width: 39.9375em) {
@@ -2167,7 +2020,7 @@ footer .footer__bottom .copyright {
       grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;
   grid-gap: 3rem;
-  padding: 6rem 6rem 4rem 6rem;
+  padding: 6rem 8rem 4rem 8rem;
 }
 
 @media (max-width: 63.9375em) {
@@ -2186,8 +2039,7 @@ footer .footer__bottom .copyright {
 .content .cardLayout .card {
   background-color: #ebebeb;
   border-radius: 50px 10px 50px 10px;
-  padding: 2rem 2rem;
-  max-width: 400px;
+  padding: 2rem;
 }
 
 @media (max-width: 39.9375em) {
@@ -2473,4 +2325,3 @@ footer .footer__bottom .copyright {
 .lastDiv {
   margin-bottom: 5rem;
 }
-/*# sourceMappingURL=style.css.map */
