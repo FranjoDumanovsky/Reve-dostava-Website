@@ -214,12 +214,32 @@ a, a:visited, a:hover {
   text-align: center;
 }
 
+@media (max-width: 39.9375em) {
+  #paragraph {
+    margin-bottom: 0rem;
+    margin-top: 10rem;
+  }
+}
+
 #paragraph h1 {
   font-weight: 400;
   margin-bottom: 3rem;
 }
 
+@media (max-width: 63.9375em) {
+  #paragraph h1 {
+    padding-top: 0rem;
+  }
+}
+
+@media only screen and (min-width: 430px) {
+  #paragraph h1 {
+    padding-top: 10rem;
+  }
+}
+
 #paragraph p {
+  font-weight: 300;
   line-height: 1.7;
   font-size: var(--fs-300);
   font-style: italic;
@@ -1043,7 +1063,8 @@ a, a:visited, a:hover {
 
 .prijaviSeContainer {
   width: 100%;
-  padding-top: 15vh;
+  padding-top: 13vh;
+  background-color: #D9D9D9;
 }
 
 @media (max-width: 39.9375em) {
@@ -1343,238 +1364,6 @@ header ul .active::after {
           transform: rotate(180deg);
 }
 
-.prijava {
-  text-align: center;
-  padding: 3rem 2rem;
-  background-color: #D9D9D9;
-}
-
-.prijava.poseban {
-  background-color: rgba(255, 255, 255, 0);
-}
-
-@media (min-width: 40em) {
-  .prijava {
-    padding: 3rem 2rem;
-  }
-}
-
-@media (min-width: 64em) {
-  .prijava {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    padding: 7rem 3.7rem;
-    text-align: left;
-  }
-  .prijava.poseban {
-    display: block;
-    padding: 3rem 2rem;
-    text-align: center;
-  }
-}
-
-.prijava h1, .prijava h5, .prijava p {
-  margin-bottom: 1.2rem 0;
-}
-
-@media (min-width: 64em) {
-  .prijava h1, .prijava h5, .prijava p {
-    margin-bottom: 2rem;
-  }
-}
-
-.prijava h1 {
-  font-size: var(--fs-600);
-  line-height: 1.35;
-  font-weight: 300;
-}
-
-@media (min-width: 64em) {
-  .prijava h5, .prijava p {
-    margin-left: 6px;
-  }
-}
-
-.prijava button {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.prijava p {
-  font-size: var(--fs-300);
-  font-weight: 300;
-  line-height: 1.6;
-}
-
-@media (min-width: 64em) {
-  .prijava p {
-    width: 80%;
-  }
-}
-
-.prijava form {
-  padding-top: 1rem;
-}
-
-@media (min-width: 64em) {
-  .prijava form {
-    width: 40%;
-  }
-}
-
-.form-group label {
-  display: block;
-}
-
-.form-group input, .form-group textarea {
-  width: 100%;
-  margin: 0.25rem 0;
-  padding: 0.5rem;
-  padding-left: 15px;
-  border: 1px solid gray;
-  font-style: italic;
-  border-radius: 10px;
-  text-transform: uppercase;
-  -webkit-box-shadow: 0px 0px 1px #2c2c2c;
-          box-shadow: 0px 0px 1px #2c2c2c;
-}
-
-.form-group textarea {
-  resize: vertical;
-}
-
-input.invalid {
-  border: 1px solid red;
-}
-
-.error-hint {
-  color: red;
-  font-style: italic;
-  font-size: var(--fs-300);
-  text-align: left;
-}
-
-.hidden {
-  display: none;
-}
-
-@media (min-width: 40em) {
-  .prijava.poseban form {
-    width: 100%;
-  }
-}
-
-.prijavaForm {
-  width: 100%;
-  height: 86%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background-color: #F8F8F8;
-  border-radius: 20px;
-  z-index: 5;
-  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.226);
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.226);
-  display: none;
-  opacity: 0.96;
-}
-
-@media (min-width: 40em) {
-  .prijavaForm {
-    width: 70%;
-  }
-}
-
-.success-message {
-  opacity: 1;
-  -webkit-animation: statusSuccess 2s ease forwards;
-          animation: statusSuccess 2s ease forwards;
-}
-
-@-webkit-keyframes statusSuccess {
-  0% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  90% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  100% {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-
-@keyframes statusSuccess {
-  0% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  90% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  100% {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-
-.formCloseButton {
-  /* Reset */
-  background-color: transparent;
-  border-color: transparent;
-  /* Cursor */
-  cursor: pointer;
-  /* Size */
-  height: 24px;
-  width: 24px;
-  top: 1.2rem;
-  left: 1.2rem;
-  /* Used to position the inner */
-  position: absolute;
-}
-
-.formCloseButton__line {
-  /* Background color */
-  background-color: rgba(0, 0, 0, 0.3);
-  /* Position */
-  position: absolute;
-  /* Size */
-  height: 1px;
-  width: 100%;
-}
-
-.formCloseButton__line--first {
-  /* Position */
-  left: 0px;
-  top: 50%;
-  -webkit-transform: translate(0%, -50%) rotate(45deg);
-  transform: translate(0%, -50%) rotate(45deg);
-  /* Size */
-  height: 1px;
-  width: 100%;
-}
-
-.formCloseButton__line--second {
-  /* Position */
-  left: 50%;
-  top: 0px;
-  -webkit-transform: translate(-50%, 0%) rotate(45deg);
-  transform: translate(-50%, 0%) rotate(45deg);
-  /* Size */
-  height: 100%;
-  width: 1px;
-}
-
 footer {
   background-color: #58595B;
   padding: 8rem 7rem 0.5rem 7rem;
@@ -1830,6 +1619,244 @@ footer .footer__bottom .copyright {
   font-weight: 200;
 }
 
+.prijava {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #D9D9D9;
+}
+
+.prijava.poseban {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+@media (min-width: 40em) {
+  .prijava {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .prijava {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 7rem 3.7rem;
+    text-align: left;
+  }
+  .prijava.poseban {
+    display: block;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+}
+
+.prijava h1, .prijava h5, .prijava p {
+  margin: 1.2rem 0;
+}
+
+@media (min-width: 64em) {
+  .prijava h1, .prijava h5, .prijava p {
+    margin-bottom: 2rem;
+  }
+}
+
+.prijava h1 {
+  font-size: var(--fs-600);
+  line-height: 1.35;
+  font-weight: 300;
+}
+
+@media (min-width: 64em) {
+  .prijava h5, .prijava p {
+    margin-left: 6px;
+  }
+}
+
+.prijava button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.prijava p {
+  font-size: var(--fs-300);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+@media (min-width: 64em) {
+  .prijava p {
+    width: 80%;
+  }
+}
+
+.prijava form {
+  padding-top: 1rem;
+}
+
+@media (min-width: 64em) {
+  .prijava form {
+    width: 40%;
+  }
+}
+
+.form-group label {
+  display: block;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  margin: 0.25rem 0;
+  padding: 0.5rem;
+  padding-left: 15px;
+  border: 1px solid gray;
+  font-style: italic;
+  border-radius: 10px;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0px 0px 1px #2c2c2c;
+          box-shadow: 0px 0px 1px #2c2c2c;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+input.invalid {
+  border: 1px solid red;
+}
+
+.error-hint {
+  color: red;
+  font-style: italic;
+  font-size: var(--fs-300);
+  text-align: left;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 40em) {
+  .prijava.poseban form {
+    width: 100%;
+  }
+}
+
+.prijavaForm {
+  width: 100%;
+  height: 86%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #F8F8F8;
+  border-radius: 20px;
+  z-index: 5;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.226);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.226);
+  display: none;
+  opacity: 0.96;
+}
+
+@media (min-width: 40em) {
+  .prijavaForm {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .prijavaForm {
+    height: 60%;
+  }
+}
+
+.success-message {
+  opacity: 1;
+  -webkit-animation: statusSuccess 2s ease forwards;
+          animation: statusSuccess 2s ease forwards;
+}
+
+@-webkit-keyframes statusSuccess {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes statusSuccess {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.formCloseButton {
+  /* Reset */
+  background-color: transparent;
+  border-color: transparent;
+  /* Cursor */
+  cursor: pointer;
+  /* Size */
+  height: 24px;
+  width: 24px;
+  top: 1.2rem;
+  left: 1.2rem;
+  /* Used to position the inner */
+  position: absolute;
+}
+
+.formCloseButton__line {
+  /* Background color */
+  background-color: rgba(0, 0, 0, 0.3);
+  /* Position */
+  position: absolute;
+  /* Size */
+  height: 1px;
+  width: 100%;
+}
+
+.formCloseButton__line--first {
+  /* Position */
+  left: 0px;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%) rotate(45deg);
+  transform: translate(0%, -50%) rotate(45deg);
+  /* Size */
+  height: 1px;
+  width: 100%;
+}
+
+.formCloseButton__line--second {
+  /* Position */
+  left: 50%;
+  top: 0px;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+  /* Size */
+  height: 100%;
+  width: 1px;
+}
+
 .heroContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2045,6 +2072,9 @@ footer .footer__bottom .copyright {
 @media (max-width: 39.9375em) {
   .content .cardLayout .card {
     text-align: left;
+    min-width: 300px;
+    text-align: center;
+    padding: 1rem;
   }
 }
 
@@ -2296,13 +2326,18 @@ footer .footer__bottom .copyright {
 
 .uvjetiHeader {
   text-align: center;
-  margin: 9rem 8rem 6rem 8rem;
+  margin: 12rem 10rem 4rem 10rem;
   font-size: var(--fs-500);
 }
 
 .uvjetiKoristenjaContent {
   padding: 2rem 8rem;
   text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 @media (max-width: 63.9375em) {
@@ -2317,9 +2352,40 @@ footer .footer__bottom .copyright {
   }
 }
 
+.uvjetiKoristenjaContent .clanak, .uvjetiKoristenjaContent p {
+  margin: 2rem 0;
+}
+
+.uvjetiKoristenjaContent .podnaslov {
+  margin: 3rem 0rem 1rem 0rem;
+}
+
+.uvjetiKoristenjaContent .clanak {
+  font-style: italic;
+  font-size: 18px;
+}
+
+.uvjetiKoristenjaContent h2 {
+  font-style: bold;
+  margin-top: 4rem;
+}
+
 .uvjetiKoristenjaContent h3 {
   margin-bottom: 1rem;
   font-style: italic;
+}
+
+.uvjetiKoristenjaContent p {
+  margin: 1rem 0;
+}
+
+.uvjetiKoristenjaContent ol, .uvjetiKoristenjaContent ul {
+  margin: 1.4rem 0;
+}
+
+.uvjetiKoristenjaContent ol li, .uvjetiKoristenjaContent ul li {
+  text-align: left;
+  margin: 0.5rem 0;
 }
 
 .lastDiv {
