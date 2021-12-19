@@ -1,12 +1,12 @@
 @charset "UTF-8";
 :root {
-  --fs-xl: clamp(3rem, 6vw + 1rem, 7.8rem);
-  --fs-lg: clamp(1.5rem, 3vw + 1rem, 4.8rem);
+  --fs-xl: clamp(3.2rem, 6vw + 1rem, 7.8rem);
+  --fs-lg: clamp(1.5rem, 3vw + 1rem, 3.5rem);
   --fs: (3rem, 8vw + 1rem, 5rem);
   --fs-600: 3.5rem;
   --fs-500: 2.3rem;
   --fs-400:1.4rem;
-  --fs-300:1.2rem;
+  --fs-300:1.3rem;
 }
 
 @media (max-width: 63.9375em) {
@@ -14,7 +14,7 @@
     --fs-600: 2.5rem;
     --fs-500: 2rem;
     --fs-400:1.2rem;
-    --fs-300:0.8rem;
+    --fs-300:1rem;
   }
 }
 
@@ -23,7 +23,7 @@
     --fs-600: 2.1rem;
     --fs-500: 1.7rem;
     --fs-400:1.1rem;
-    --fs-300:0.7rem;
+    --fs-300:0.9rem;
   }
 }
 
@@ -36,6 +36,11 @@
           box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 body, html {
@@ -157,7 +162,7 @@ a, a:visited, a:hover {
 .textAlignCenter {
   text-align: center;
   margin: 40px auto;
-  width: 80ch;
+  max-width: 800px;
   letter-spacing: 1.6;
   line-height: 1.6;
   font-style: italic;
@@ -247,13 +252,13 @@ a, a:visited, a:hover {
 
 .backgroundAnimation {
   position: fixed;
-  height: 200vh;
+  height: 100vh;
   width: 100vw;
   top: 0;
   left: 0;
   background-color: #eeeeee;
-  -webkit-animation: opacity 2.8s forwards;
-          animation: opacity 2.8s forwards;
+  -webkit-animation: opacity 1.8s forwards;
+          animation: opacity 1.8s forwards;
   z-index: 6;
   -webkit-transition: ease-in-out;
   transition: ease-in-out;
@@ -286,8 +291,8 @@ a, a:visited, a:hover {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-animation: logoAnimation 2.6s forwards ease-in-out;
-          animation: logoAnimation 2.6s forwards ease-in-out;
+  -webkit-animation: logoAnimation 2s forwards ease-in-out;
+          animation: logoAnimation 2s forwards ease-in-out;
   z-index: 7;
 }
 
@@ -306,8 +311,8 @@ a, a:visited, a:hover {
   }
   100% {
     width: clamp(5rem, 16vw, 7rem);
-    top: 0em;
-    left: 100px;
+    top: 2em;
+    left: 80px;
     opacity: 0;
   }
 }
@@ -327,8 +332,8 @@ a, a:visited, a:hover {
   }
   100% {
     width: clamp(5rem, 16vw, 7rem);
-    top: 0em;
-    left: 100px;
+    top: 2em;
+    left: 80px;
     opacity: 0;
   }
 }
@@ -336,8 +341,8 @@ a, a:visited, a:hover {
 .logoAnimation2 {
   position: relative;
   width: clamp(6rem, 16vw, 7.5rem);
-  -webkit-animation: logoAnimation2 2.6s forwards ease;
-          animation: logoAnimation2 2.6s forwards ease;
+  -webkit-animation: logoAnimation2 1.6s forwards ease;
+          animation: logoAnimation2 1.6s forwards ease;
   opacity: 0;
   -webkit-transition: 0.6s;
   transition: 0.6s;
@@ -449,15 +454,15 @@ a, a:visited, a:hover {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   position: fixed;
-  -webkit-animation: load2 2s normal forwards;
-          animation: load2 2s normal forwards;
+  -webkit-animation: load2 1.2s normal forwards;
+          animation: load2 1.2s normal forwards;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 7px;
   width: 50vw;
   z-index: 1000;
-  display: block;
+  visibility: hidden;
 }
 
 @media (max-width: 39.9375em) {
@@ -522,34 +527,34 @@ a, a:visited, a:hover {
 
 @-webkit-keyframes load2 {
   0% {
-    display: none;
+    visibility: visible;
     opacity: 1;
   }
   1% {
-    display: block;
+    visibility: visible;
   }
   90% {
     opacity: 0.8;
   }
   100% {
-    display: none;
+    visibility: hidden;
     opacity: 0;
   }
 }
 
 @keyframes load2 {
   0% {
-    display: none;
+    visibility: visible;
     opacity: 1;
   }
   1% {
-    display: block;
+    visibility: visible;
   }
   90% {
     opacity: 0.8;
   }
   100% {
-    display: none;
+    visibility: hidden;
     opacity: 0;
   }
 }
@@ -717,7 +722,6 @@ a, a:visited, a:hover {
 }
 
 .content .curved .pogodnosti__card {
-  width: 23%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -726,6 +730,7 @@ a, a:visited, a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: -25%;
+  width: 23%;
 }
 
 @media (max-width: 63.9375em) {
@@ -747,7 +752,7 @@ a, a:visited, a:hover {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 50px;
+  border-radius: 20rem;
   cursor: pointer;
 }
 
@@ -973,15 +978,24 @@ a, a:visited, a:hover {
 
 .map iframe {
   border-radius: 50px;
+  border: none;
 }
 
-.map #samoborMap {
+.map #rijekaMap {
   display: none;
+  height: 100%;
   cursor: pointer;
 }
 
 .map #zagrebMap {
   display: block;
+  height: 100%;
+  cursor: pointer;
+}
+
+.map #osijekMap {
+  display: none;
+  height: 100%;
   cursor: pointer;
 }
 
@@ -993,7 +1007,7 @@ a, a:visited, a:hover {
   z-index: -1;
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 63.9375em) {
   .linije {
     display: none;
   }
@@ -1001,10 +1015,12 @@ a, a:visited, a:hover {
 
 .linije img {
   position: absolute;
-  width: 100%;
-  left: -550px;
-  top: -470px;
-  opacity: 0.75;
+  width: 800px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: -300px;
+  left: -400px;
+  opacity: 0.45;
 }
 
 @media (max-width: 63.9375em) {
@@ -1290,7 +1306,7 @@ header ul .active::after {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 200px 0px 0px 0px;
-  background-color: #8585851e;
+  background-color: #e9e9e9;
 }
 
 @media (max-width: 39.9375em) {
@@ -1358,8 +1374,8 @@ header ul .active::after {
   }
 }
 
-.weave {
-  display: relative;
+.weave svg {
+  display: block;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -1714,7 +1730,6 @@ footer .footer__bottom .copyright {
   border: 1px solid gray;
   font-style: italic;
   border-radius: 10px;
-  text-transform: uppercase;
   -webkit-box-shadow: 0px 0px 1px #2c2c2c;
           box-shadow: 0px 0px 1px #2c2c2c;
 }
@@ -1861,7 +1876,7 @@ input.invalid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 12rem 8rem 15rem 8rem;
+  margin: 12rem 4rem 15rem 4rem;
   color: #0B0B0B;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -1869,13 +1884,13 @@ input.invalid {
 
 @media (max-width: 63.9375em) {
   .heroContainer {
-    margin: 10rem 4rem 12rem 4rem;
+    margin: 10rem 2rem 12rem 2rem;
   }
 }
 
 @media (max-width: 39.9375em) {
   .heroContainer {
-    margin: 10rem 0rem 12rem 0rem;
+    margin: 10rem 0rem 15rem 0rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1884,7 +1899,7 @@ input.invalid {
 }
 
 .heroContainer__text {
-  width: 42%;
+  width: 44%;
 }
 
 @media (max-width: 39.9375em) {
@@ -1930,13 +1945,12 @@ input.invalid {
   text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.418);
   color: #0B0B0B;
   z-index: 2;
-  margin-bottom: 2.5rem;
   position: relative;
 }
 
 @media (max-width: 63.9375em) {
   .heroContainer__text h1 {
-    font-size: var(--fs-500);
+    font-size: var(--fs-lg);
   }
 }
 
@@ -1944,7 +1958,8 @@ input.invalid {
   .heroContainer__text h1 {
     color: white;
     font-weight: 400;
-    margin-bottom: 0;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -1971,12 +1986,18 @@ input.invalid {
   .heroContainer__text .mainCta {
     z-index: 2;
     position: relative;
-    top: 1rem;
+    top: 0rem;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .heroContainer .posebanHeader {
+    margin-top: 0rem;
   }
 }
 
 .heroContainer .heroContainerImage {
-  width: 45%;
+  width: 42%;
 }
 
 .heroContainer__image {
@@ -1997,7 +2018,7 @@ input.invalid {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 98.5%;
   background-color: black;
   z-index: 1;
   opacity: 0.4;
@@ -2028,9 +2049,9 @@ input.invalid {
   }
 }
 
-@media (max-width: 39.9375em) {
+@media only screen and (max-width: 650px) {
   .content .headerContent {
-    padding-top: 4rem;
+    padding-top: 7rem;
   }
 }
 
@@ -2072,7 +2093,7 @@ input.invalid {
 @media (max-width: 39.9375em) {
   .content .cardLayout .card {
     text-align: left;
-    min-width: 300px;
+    width: 80%;
     text-align: center;
     padding: 1rem;
   }
@@ -2128,7 +2149,7 @@ input.invalid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 2rem 12rem 4rem 12rem;
+  padding: 8rem 12rem 4rem 12rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2136,7 +2157,7 @@ input.invalid {
 
 @media (max-width: 63.9375em) {
   .content .info {
-    padding: 0rem 4rem;
+    padding: 5rem 4rem;
   }
 }
 
@@ -2146,7 +2167,7 @@ input.invalid {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 0rem 1rem;
+    padding: 3rem 1rem 0rem 1rem;
   }
 }
 
@@ -2174,9 +2195,9 @@ input.invalid {
   display: block;
   top: -1.2rem;
   font-size: var(--fs-400);
-  width: 150px;
+  width: 200px;
   left: 50%;
-  margin-left: -75px;
+  margin-left: -100px;
   z-index: 2;
 }
 
@@ -2197,18 +2218,18 @@ input.invalid {
   position: absolute;
   z-index: 1;
   height: 3px;
-  width: 170px;
+  width: 250px;
   top: -2px;
   left: 50%;
-  margin-left: -85px;
+  margin-left: -125px;
   background-color: #f5f5f5;
   border: none;
 }
 
 @media (max-width: 39.9375em) {
   .content .info__oNama .transparent-border, .content .info__više .transparent-border {
-    width: 110px;
-    margin-left: -55px;
+    width: 180px;
+    margin-left: -90px;
   }
 }
 
@@ -2284,14 +2305,16 @@ input.invalid {
 
 .carouselSection .textSection p {
   line-height: 1.8;
-  font-size: var(--fs-400);
-  width: 65%;
+  font-size: var(--fs-300);
+  width: 50%;
   margin-left: 2rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 63.9375em) {
   .carouselSection .textSection p {
     margin-left: 0rem;
+    margin-top: 0;
     width: 100%;
     font-size: var(--fs-300);
   }
@@ -2315,13 +2338,13 @@ input.invalid {
 .owl-carousel .owl-nav button.owl-next {
   top: 50%;
   right: -80px;
-  margin-top: -40px;
+  margin-top: -65px;
 }
 
 .owl-carousel .owl-nav button.owl-prev {
   top: 50%;
   left: -80px;
-  margin-top: -40px;
+  margin-top: -65px;
 }
 
 .uvjetiHeader {
