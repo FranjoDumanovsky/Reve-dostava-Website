@@ -1,0 +1,312 @@
+// NAVIGATION (HEADER) MENU STYLES
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 70px;
+    background: rgb(238, 238, 238);
+    z-index: 3;
+    height: 110px;
+    transition: 0.3s ease-in-out;
+
+    @include breakpoint-down(small){
+        padding: 5px 40px;
+        height: 70px;
+    }
+    
+    &.sticky {
+        transition: 0.3s ease-in-out;
+        height: 90px;
+
+        @include breakpoint-down(small){
+            height: 70px;
+            padding: 0px 40px;
+            
+        }
+        
+    }
+
+    .logo { 
+        position: relative;
+        width: clamp(6rem, 16vw, 7.5rem);
+    }
+
+
+// links for Desktop menu
+
+    ul {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            position: relative;
+            list-style: none;
+
+
+            a {
+                position: relative;
+                margin: 0 25px;
+                font-family: $merrieweather;
+                font-style: italic;
+                font-weight: 300;
+                color: $greyText;
+                font-size: var(--fs-400);
+                
+
+                &:hover {
+                    color: $mainYellow;
+                    font-weight: 400;
+                  }
+
+                  &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -5px;
+                    width: 100%;
+                    height: 1.6px;
+                    background: $mainYellow;
+                    -webkit-transform: scaleX(0);
+                            transform: scaleX(0);
+                    -webkit-transform-origin: right;
+                            transform-origin: right;
+                    -webkit-transition: -webkit-transform 300ms ease-in;
+                    transition: -webkit-transform 300ms ease-in;
+                    transition: transform 300ms ease-in;
+                    transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+                    border-radius: 1rem;
+                  }
+                  &:hover::after {
+                      -webkit-transform: scaleX(1);
+                      transform: scaleX(1);
+                      -webkit-transform-origin: left;
+                      transform-origin: left;
+                      
+          
+                  }
+
+                  
+            }
+        }
+
+        .active {
+            color: $mainYellow;
+            font-weight: 500;
+            position: relative;
+        
+            &::after {
+              content: '';
+              position: absolute;
+              left: -1px;
+              bottom: -5px;
+              width: 100%;
+              height: 1.6px;
+              background: $mainYellow;
+              -webkit-transform: scaleX(1);
+                      transform: scaleX(1);
+              -webkit-transform-origin: right;
+                      transform-origin: right;
+              -webkit-transition: -webkit-transform 300ms ease-in;
+              transition: -webkit-transform 300ms ease-in;
+              transition: transform 300ms ease-in;
+              transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+              border-radius: 1rem;
+              
+        
+            }
+          }
+
+
+    }
+
+}
+
+
+
+
+
+// HAMBURGER MENU STYLES 
+
+.hamburgerMenu {
+  position: fixed;
+  right: 5.5rem;
+  top: 2.8rem;
+  z-index: 5;
+
+  @include breakpoint-down(small){
+    top:1.5rem;
+    right: 2.5rem;
+    transition: 0.3s ease;
+}
+
+    
+    
+        > span {
+            display: block;
+            width: 35px;
+            height: 3px;
+            background-color: black;
+            margin:5px auto;
+  
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+    }}
+
+    .scrolled {
+        top:35px;
+        right: 80px;
+        transition: 0.3s ease-in-out;
+
+        @include breakpoint-down(small){
+            top:1.5rem;
+            right: 2.5rem;
+            transition: 0.3s ease;
+        }
+        
+    }
+    
+    //HAMBURGER ANIMATION 
+
+    .isActive {
+    
+        > span:first-child {
+            -webkit-transform: translateY(8px) rotate(45deg);
+            -ms-transform: translateY(8px) rotate(45deg);
+            -o-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+        }
+        
+        > span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        > span:last-child {
+            -webkit-transform: translateY(-8px) rotate(-45deg);
+            -ms-transform: translateY(-8px) rotate(-45deg);
+            -o-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+
+
+// MOBILE NAVIGATION MENU OPEN
+
+
+
+// MOBILE MENU YELLOW BACKGROUND
+
+.backgroundMobileMenu {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 500vh;
+    background-color: rgb(255, 213, 24);
+    z-index: 4;
+    display: none;
+    
+}
+
+
+// CAR PHOTO + H1
+
+
+
+.banner {
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 200px 0px 0px 0px;
+    background-color: #e9e9e9;
+    
+
+    @include breakpoint-down(small){
+        padding: 120px 0 0 0;
+
+    }
+
+    // BANNER TEXT STYLES
+
+    h1,p {
+        position: relative;
+        z-index: 1;
+        color: $black;
+        font-weight: 500;
+        
+    }
+    h1 {
+        padding: 0 15px;
+        font-size: var(--fs-xl);
+
+
+    }
+    #yellowText {
+        color: $mainYellow;
+        line-height: 1;
+       
+    }
+
+    p{
+        margin: 40px 0 40px 0;
+        font-size:var(--fs-300);
+        line-height: 1.9;
+        letter-spacing: 1.8;
+        font-weight: 400;
+        width: 80%;
+    }
+
+    div {
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        @include breakpoint-down(small){
+            width: 100%;
+        }
+
+        a{ 
+            @include breakpoint-down(small){
+                margin-bottom: 6px;
+       
+            }
+
+        }
+
+        @include breakpoint-down(small){
+            flex-direction: column;
+        }
+    }
+
+
+}
+ 
+
+.weave{
+
+
+
+svg {
+    display: block;
+    transform: rotate(180deg);
+
+
+}
+
+
+}
+

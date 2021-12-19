@@ -1,0 +1,240 @@
+.backgroundAnimation {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    left: 0;
+    background-color: rgb(238, 238, 238);
+    animation: opacity 1.8s forwards;
+    z-index: 6;
+    transition: ease-in-out;
+}
+@keyframes opacity {
+    80% {
+        opacity: 0.99;  
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.logoAnimation {
+    position: fixed;
+    width:70vw;
+    top:50%;
+    left:50%;
+    
+    transform: translate(-50%, -50%);
+    animation: logoAnimation 2s forwards ease-in-out;
+    z-index: 7;
+}
+
+@keyframes logoAnimation {
+
+    60% {
+        width: 70vw;
+        top:50%;
+        left:50%;
+        
+        transform: translate(-50%, -50%);
+        opacity: 0.9;
+    }
+    99% {
+        transform: none;
+
+    }
+    100% {
+        width:clamp(5rem, 16vw, 7rem);
+        top: 2em;
+        left:80px;
+        opacity:0;
+    }
+}
+
+.logoAnimation2 {
+    position: relative;
+    width: clamp(6rem, 16vw, 7.5rem);
+    animation: logoAnimation2 1.6s forwards ease;
+    opacity: 0;
+    transition:  0.6s;
+}
+@keyframes logoAnimation2 {
+    90% {
+        opacity: 0.01;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.has-fade {
+    visibility: hidden;
+}
+
+
+@keyframes fade-in {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    1% {
+        visibility: visible;
+        opacity: 0;
+
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+
+    }
+
+}
+.fade-in {
+    animation: fade-in 300ms ease-in-out forwards;
+}
+
+
+@keyframes fade-out {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+}
+
+.fade-out {
+    animation: fade-out 300ms ease-in-out forwards;
+}
+
+// Loading animation
+
+.progress {
+    background: rgba(255,255,255,0.1);
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 50px;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    animation: load2 1.2s normal forwards;
+    display: flex;
+    height:7px;
+    width: 50vw;
+    z-index: 1000;
+    visibility: hidden;
+
+    @include breakpoint-down(small){
+        top:65%;
+        width: 70vw;
+    }
+  }
+  
+  .progress-value {
+    animation: load 2s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 50px;
+    background: $mainYellow;
+    height: 7px;
+    width: 0;
+    
+  }
+  
+  @keyframes load {
+    0% { 
+        width: 0; 
+        display: none;
+        
+    }
+    1% {
+        display: block;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    90% { 
+        width: 100%;
+       opacity:0;
+    }
+    100% {
+        display: none;
+        opacity: 0;
+    }
+  }
+     
+  @keyframes load2 {
+    0% { 
+        visibility: visible;
+        opacity: 1;
+    }
+    1% {
+        visibility: visible;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% { 
+        visibility: hidden;
+
+        opacity: 0;
+    }
+  }
+
+  
+  
+
+/// the mobile menu animations
+
+
+.mobileNav {
+    display: none;
+    position: fixed;
+    text-align: center;
+    top:55%;
+    left:0%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    text-align: left;
+    justify-content: center;
+
+    animation: mobileMenu 0.6s normal forwards;
+
+
+    @keyframes mobileMenu{
+        0% { 
+            left: 0%
+        }
+        100% {
+            left: 50%;
+        }
+      }
+
+    
+    a:-webkit-any-link {
+
+        color: $greyText;
+        }
+    
+    
+    li {
+        margin-bottom: 2rem;
+        font-size: var(--fs-500);
+        list-style-type: none;
+        position: relative;
+        font-style: italic;
+        
+    }
+}

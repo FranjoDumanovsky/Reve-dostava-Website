@@ -1,13 +1,13 @@
 const form = document.querySelector("form");
 const nameInput = document.querySelector("input[name='name']");
 const emailInput = document.querySelector("input[name='email']");
-const successMessage = document.querySelector(".success-message")
-
+const phoneInput = document.querySelector("input[name='phone']")
+const successMessage = document.querySelector(".success-message");
 
 // Validating the inputs for email and name
 nameInput.isValid = () => !!nameInput.value;
 emailInput.isValid = () => isValidEmail(emailInput.value);
-
+phoneInput.isValid= () => isValidPhone(phoneInput.value);
 
 const inputFields = [nameInput, emailInput];
 

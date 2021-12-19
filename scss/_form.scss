@@ -1,0 +1,225 @@
+.prijava {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #D9D9D9;
+
+
+
+
+
+    &.poseban {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    @include breakpoint-up(medium){
+        padding : 3rem 2rem; 
+     }
+
+    @include breakpoint-up(large){
+        display: flex;
+        justify-content: space-evenly;
+        padding: 7rem 3.7rem;
+        text-align: left;
+
+        &.poseban {
+            display: block;
+            padding: 3rem 2rem;
+            text-align: center;
+            
+   
+        }
+     }
+
+
+
+    h1,h5,p {
+        margin: 1.2rem 0;
+
+        @include breakpoint-up(large){
+            margin-bottom: 2rem;
+         }
+    }
+
+    h1 {
+        font-size: var(--fs-600);
+        line-height: 1.35;
+        font-weight: 300;
+
+    }
+
+    h5,p {
+
+        @include breakpoint-up(large){
+            margin-left: 6px;
+         }
+
+    }
+
+    button {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+
+    p {
+        font-size: var(--fs-300);
+        font-weight: 300;
+
+        line-height: 1.6;
+        @include breakpoint-up(large){
+            width: 80%;
+         }
+    }
+
+form {
+    padding-top: 1rem;
+    @include breakpoint-up(large){
+        width: 40%;
+     }
+}
+}
+
+.form-group {
+    label {
+        display: block;
+    }
+
+    input,textarea {
+        width: 100%;
+        margin:0.25rem 0;
+        padding: 0.5rem;
+        padding-left: 15px;
+        border: 1px solid gray;
+        font-style: italic;
+        border-radius: 10px;
+        box-shadow: 0px 0px 1px rgb(44, 44, 44);
+    }
+
+    textarea {
+        resize: vertical;
+    }
+}
+
+input.invalid {
+    border: 1px solid red;
+}
+
+.error-hint {
+    color: red;
+    font-style: italic;
+    font-size: var(--fs-300);
+    text-align: left;
+}
+.hidden {
+    display: none;
+}
+
+.prijava.poseban {
+
+    form {
+   
+        @include breakpoint-up(medium){
+            width: 100%;
+         }
+    }
+}
+
+
+
+.prijavaForm {
+  width: 100%;
+  height: 86%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #F8F8F8;
+  border-radius: 20px;
+  z-index: 5;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.226);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.226);
+  display: none;
+  opacity: 0.96;
+  
+
+  @include breakpoint-up(medium){
+    width: 70%;
+ }
+ @media only screen and (min-width: 1800px) {
+    height: 60%;
+   }
+}
+
+
+.success-message {
+    opacity: 1;
+    animation: statusSuccess 2s ease forwards;
+
+    @keyframes statusSuccess {
+        0% {
+            opacity: 1;
+            pointer-events: all;
+        }
+        90% {
+            opacity: 1;
+            pointer-events: all;
+        }
+    
+        100% {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+    }
+}
+
+
+
+.formCloseButton {
+    /* Reset */
+    background-color: transparent;
+    border-color: transparent;
+    /* Cursor */
+    cursor: pointer;
+    /* Size */
+    height: 24px;
+    width: 24px;
+    top: 1.2rem;
+    left: 1.2rem;
+    /* Used to position the inner */
+    position: absolute;
+  }
+  
+  .formCloseButton__line {
+    /* Background color */
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Position */
+    position: absolute;
+    /* Size */
+    height: 1px;
+    width: 100%;
+  }
+  
+  .formCloseButton__line--first {
+    /* Position */
+    left: 0px;
+    top: 50%;
+    -webkit-transform: translate(0%, -50%) rotate(45deg);
+            transform: translate(0%, -50%) rotate(45deg);
+    /* Size */
+    height: 1px;
+    width: 100%;
+  }
+  
+  .formCloseButton__line--second {
+    /* Position */
+    left: 50%;
+    top: 0px;
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+            transform: translate(-50%, 0%) rotate(45deg);
+    /* Size */
+    height: 100%;
+    width: 1px;
+  }

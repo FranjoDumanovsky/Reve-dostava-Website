@@ -1,24 +1,41 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pravilnik o radu</title>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
-    
+        <meta name="description" content="Reve dostava je vodeći hrvatski partner za platforme Glovo i Wolt. Pravilnik o radu"></head>
+
+        <title>Reve dostava - Pravilnik o radu</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
-    
+
+
+        <!-- SCRIPT LOADER -->
+        <script type="text/javascript">
+            window.addEventListener("load", function () {
+                const mainScript = document.createElement("script");
+                const formScript = document.createElement("script");
+                const prijavaScript = document.createElement("script");
+        
+                mainScript.src = "script.js";
+                formScript.src = "form.js";
+                prijavaScript.src = "prijava.js";
+        
+                document.body.appendChild(mainScript);
+                document.body.appendChild(formScript);
+                document.body.appendChild(prijavaScript);
+        });
+            
+        </script>
     </head>
 <body>
 
 
     <header>
-        <a href="#"><img src="Slike/LogoYellow.svg" class="logo" alt=""></a>
+        <a href="#"><img src="Slike/LogoYellow.svg" class="logo" alt="reve-dostava reve logo"></a>
         <ul class="hide-for-tablet">
             <li><a href="index.html">Početna</a></li>
             <li><a href="oNama.html" >O Nama</a></li>
@@ -877,7 +894,7 @@
 
         </div>
         
-        <form action="https://formspree.io/f/xyylqwzr" method="POST">
+        <form action="https://formspree.io/f/mnqwaggg" method="POST">
             <div class="form-group">
                 <input type="text" placeholder="Ime i prezime" id="name" name="name">
                 <div class="error-hint hidden">Your name is required.</div>
@@ -887,7 +904,11 @@
                 <div class="error-hint hidden">Your email is invalid.</div>
             </div>
             <div class="form-group">
-                <textarea name="message" placeholder="Poruka" id="message" cols="20" rows="10"></textarea>
+                <input type="number" placeholder="Mobitel" id="phone" name="phone">
+                <div class="error-hint hidden">Phone Number</div>
+            </div>
+            <div class="form-group">
+                <textarea name="message" placeholder="Poruka" id="message" cols="20" rows="7"></textarea>
             </div>
     
             <button type="submit" class="mainCta">Prijavi se</button>
@@ -901,12 +922,12 @@
     
 
 <footer class="footer">
-    <img src="Slike/LogoReve-sivaSlova.svg" class="footerLogo" alt="">
-    <div class="adresa">Josipa jelaćića 13</div>
+    
+    <div class="adresa">Roginina 6, Zagreb</div>
     <div class="footer__top">
         <div class="footer__top__leftSide">
             <ul class="links">
-                <li><a href="uvjetiKoristenja.html">Uvijeti korištenja</a></li>
+                
                 <li><a href="pravilnikORadu.html">Pravilnik o radu</a></li>
                 <li><a href="oNama.html">O nama</a></li>
             </ul>
@@ -924,7 +945,7 @@
             <ul class="info">
                 <li class="dodatniLinkovi">
                     <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2780.958377066166!2d15.914880551083929!3d45.81209197900403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d13a98a1cfd1%3A0x40d20054db8fc902!2sRoginina%20ul.%206%2C%2010000%2C%20Zagreb!5e0!3m2!1sen!2shr!4v1635509000589!5m2!1sen!2shr" target=”_blank” >
-                        <img src="Slike/LocationIcon.svg" alt="">
+                        <img src="Slike/LocationIcon.svg" loading="lazy" alt="Lokacija reve-dostava reve">
                         
                         <span>Roginina 6, Zagreb</span>
                      </a>
@@ -932,14 +953,14 @@
 
                 <li>
                     <a href="https://wa.me/+385916192520" target=”_blank”>
-                        <img src="Slike/PhoneIcon.svg" alt="">
+                        <img src="Slike/PhoneIcon.svg" loading="lazy" alt="Broj mobitela reve-dostava reve">
                         <span>+385 91 6192 520</span> 
                     </a>
                 </li>
 
                 <li>
                     <a href="mailto:info@reve-dostava.com" target=”_blank”>
-                        <img src="Slike/MailIcon.svg" alt="">
+                        <img src="Slike/MailIcon.svg" loading="lazy" alt="Mail reve-dostava reve">
                         <span>info@reve-dostava.com</span>   
                     </a>
                 </li>
@@ -953,10 +974,10 @@
     <div class="footer__bottom">
         <div class="socials">
             <a href="https://www.instagram.com/revedostava/?hl=en">
-                <img src="Slike/InstagramIcon.svg" alt="">
+                <img src="Slike/InstagramIcon.svg" loading="lazy" alt="reve-dostava reve Instagram icon">
             </a>
             <a href="https://www.facebook.com/revedostavahr/">
-                <img src="Slike/FacebookIcon.svg" alt="">
+                <img src="Slike/FacebookIcon.svg" loading="lazy" alt="reve-dostava reve Facebook icon">
             </a>
         </div>
         <div class="copyright">

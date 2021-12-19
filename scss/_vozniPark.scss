@@ -1,0 +1,90 @@
+.carouselSection {
+  width: 100%;
+  padding: 4rem 6rem;
+  background-color: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint-down(medium){
+    padding: 3rem 2rem;
+
+}
+
+
+  .containerForCarousel {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .textSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem 0;
+    width: 100%;
+
+    @include breakpoint-down(medium){
+      padding: 4rem 0;
+      flex-direction: column;
+      text-align: center;
+  
+  }
+
+    h1 {
+      width: 30%;
+      font-size: var(--fs-600);
+      font-weight: 300;
+      font-style: italic;
+      margin-top: 0;
+      @include breakpoint-down(medium){
+        width: 100%;
+        margin-bottom: 2rem;
+    
+    }
+    }
+     
+    p {
+      line-height: 1.8;
+      font-size: var(--fs-300);
+      width: 50%;
+      margin-left: 2rem;
+      margin-top: 1rem;
+
+      @include breakpoint-down(medium){
+        margin-left: 0rem;
+        margin-top: 0;
+        width: 100%;
+        font-size: var(--fs-300);
+    
+    }
+    }
+  }
+
+}
+
+
+.owl-carousel .owl-nav button.owl-next,.owl-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    width: 100px;
+
+      &:hover {
+      background-color: transparent;
+      color: $mainYellow;
+      }
+      span {
+        font-size: 80px;
+        z-index: 10;
+  }
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  top:50%;
+  right:-80px;
+  margin-top: -65px;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  top:50%;
+  left:-80px;
+  margin-top: -65px;
+}
