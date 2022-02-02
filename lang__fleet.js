@@ -115,5 +115,59 @@ var language = {
 
  
 if (sessionStorage.getItem("lang") == "eng") {
-        languageList.innerHTML = '<li class="active-lang" onClick="changeLanguage(\'eng\')"><a href="#" class="eng">English</a></li><li onClick="changeLanguage(\'hr\')"><a href="#" class="hr">Croatian</a></li>';
+
+    languageList.innerHTML = '<li class="active-lang" onClick="changeLanguage(\'eng\')"><a href="#" class="eng">English</a></li><li onClick="changeLanguage(\'hr\')"><a href="#" class="hr">Croatian</a></li>';
+
+    vehicleFleetPageHeader.textContent =
+    language.eng.vehicleFleetPageHeader
+    
+    vehicleFleetPageText.textContent =
+    language.eng.vehicleFleetPageText
+
+    vehicleFleetPageFleetSectionHeader.textContent =
+    language.eng.vehicleFleetPageFleetSectionHeader
+
+    vehicleFleetPageFleetSectionText.textContent =
+    language.eng.vehicleFleetPageFleetSectionText
+
+    contactUsButton.textContent =
+    language.eng.contactUsButton
+
+    signUpButton.textContent =
+    language.eng.signUpButton
+
+    homePageLink.textContent =
+    language.eng.homePageLink
+
+    aboutUsPageLink.textContent =
+    language.eng.aboutUsPageLink
+
+    contactUsPageLink.textContent =
+    language.eng.contactUsPageLink
+
+    vehicleFleetPageLink.textContent =
+    language.eng.vehicleFleetPageLink
+
+    signUpPageLink.textContent =
+    language.eng.signUpPageLink
+
+    rulesOfProcedurePage.textContent =
+    language.eng.rulesOfProcedurePage
+
+    signUpName.textContent =
+    language.eng.signUpName
+
+    signUpPhone.textContent =
+    language.eng.signUpPhone
+
+    signUpMessage.textContent =
+    language.eng.signUpMessage
+
 }
+
+    else {
+           
+languageList.innerHTML = 
+'<li class="active-lang" onClick="changeLanguage(\'hr\')"><a href="#" class="hr">Croatian</a></li> <li  onClick="changeLanguage(\'eng\')"><a href="#" class="eng">English</a></li>';
+
+    }
