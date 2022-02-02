@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Reve dostava je vodeći hrvatski partner za platforme Glovo i Wolt."></head>
+    <meta name="description" content="Naš tim stoji ti na raspolaganju. Javi nam se na info@reve-dostava.com ili nas nazovi na +385 91 6192 520"></head>
 
-    <title>Reve dostava - O nama</title>
+    <title>O nama</title>
+
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,20 +39,34 @@
 <body>
 
 
+    <div  class="lang-change">
+        <img src="Slike/earth.png" alt="" class="earth-icon">
+         <div>
+              <ul class="lang-change__dropdown">
+                  <li class="active-lang" onClick="changeLanguage('eng')">
+                      <a href="#" class="eng">Engish</a>
+                     </li>
+                     <li onClick="changeLanguage('hr')">
+                         <a href="#" class="hr">Croatian</a>
+                     </li>
+ 
+         </div>
+     </div>
+ 
 
 
 <!-- DESKTOP NAVIGATION-->
 
     <header>
-        <a href="index.html"><img src="Slike/LogoYellow.svg" class="logo" alt="reve-dostava reve logo"></a>
+        <a href="index.html"><img src="Slike/LogoYellow.svg" class="logo" alt="reve-dostava logo"></a>
         <ul class="hide-for-tablet">
-            <li><a href="index.html">Početna</a></li>
-            <li><a href="oNama.html" class="active">O Nama</a></li>
-            <li><a href="kontakt.html">Kontakti</a></li>
-            <li><a href="vozniPark.html">Vozni park</a></li>
+            <li><a href="index.html" id="home-page-link">Početna</a></li>
+            <li><a href="oNama.html" id="about-us-page-link" class="active">O Nama</a></li>
+            <li><a href="kontakt.html" id="contact-us-page-link">Kontakti</a></li>
+            <li><a href="vozniPark.html" id="vehicle-fleet-page-link">Vozni park</a></li>
            
         </ul>
-        <a class="mainCta hide-for-tablet" id="prijaviSeButton"  href="#">Prijavi se</a>
+        <a class="mainCta hide-for-tablet sign-up-button" id="prijaviSeButton"  href="#">Prijavi se</a>
 
 
     </header>
@@ -71,11 +87,11 @@
     <div class="backgroundMobileMenu hide-for-desktop">
         <div>
             <ul class="mobileNav">
-                <li><a href="index.html">Početna</a></li>
-                <li><a href="oNama.html">O Nama</a></li>
-                <li><a href="kontakt.html">Kontakti</a></li>
-                <li><a href="vozniPark.html">Vozni park</a></li>
-                <li><a href="prijaviSe.html">Prijavi se</a></li>
+                <li><a href="index.html" id="home-page-link">Početna</a></li>
+                <li><a href="oNama.html" id="about-us-page-link">O Nama</a></li>
+                <li><a href="kontakt.html" id="contact-us-page-link">Kontakti</a></li>
+                <li><a href="vozniPark.html" id="vehicle-fleet-page-link">Vozni park</a></li>
+                <li><a href="prijaviSe.html" id="sign-up-page-link" class="sign-up-button">Prijavi se</a></li>
             </ul>
         </div>
     </div>
@@ -85,17 +101,17 @@
 
     <div class="heroContainer">
         <div class="heroContainer__text">
-            <h1 class="velikiEkran">REVE DOSTAVA
+            <h1 class="velikiEkran" id="about-us-page-hero-section-header">REVE DOSTAVA
                 </h1>
 
-                <h1 class="maliEkran">REVE DOSTAVA
+                <h1 class="maliEkran" id="about-us-page-hero-section-header">REVE DOSTAVA
                     </h1>
     
-                <p> Reve dostavu čini tim mladih i poduzetnih ljudi koji su našim dostavljačima uvijek na
+                <p id="about-us-page-hero-section-text"> Reve dostavu čini tim mladih i poduzetnih ljudi koji su našim dostavljačima uvijek na
                     raspolaganju bilo da se radi o edukaciji ovisno o platformi na kojoj rade, administraciji ili
                     izlascima na teren.</p>
     
-                    <a href="mailto:info@reve-dostava.com" target=”_blank”> <button class="mainCta">Kontaktiraj nas</button> </a>
+                    <a href="mailto:info@reve-dostava.com" target=”_blank”> <button class="mainCta" id="contact-us-button">Kontaktiraj nas</button> </a>
 
         </div>
         <div class="heroContainerImage">
@@ -103,22 +119,22 @@
                 <img  srcset="Slike/delivery-man.webp 350w, 
                 Slike/delivery-man.webp 1500w" 
                 sizes="(max-width: 800px) 350w, 1500w" 
-                src="Slike/delivery-man.webp" loading="lazy" alt="reve dostavaljač, reve dostava">
+                src="Slike/delivery-man.webp" loading="lazy" alt="reve dostava dostavaljač na biciklu">
             </div>
         </div>
 
     </div> 
 
     <div id="paragraph">
-        <h1>Najpouzdaniji partner za dostavu hrane</h1>
-        <p >Reve dostava je vodeći hrvatski partner za platforme Wolt i Glovo. Naša suradnja s Woltom traje od 07.12.2018., a danas smo prvi po aktivnim dostavljačima za navedenu platformu. Već 3 godine kontinuirano rastemo. Djelujemo u preko 10 gradova diljem Republike Hrvatske: Zagreb, Rijeka, Osijek itd. Posjedujemo vlastitu flotu različitih vozila koja su na raspolaganju našim dostavljačima. Više od 300 zadovoljnih dostavljača najbolji su pokazatelj našeg pouzdanog i sigurnog radnog okruženja.</p>
+        <h1 id="about-us-page-welcome-header">Najpouzdaniji partner za dostavu hrane</h1>
+        <p id="about-us-page-welcome-text">Reve dostava je vodeći hrvatski partner za platforme Wolt i Glovo. Naša suradnja s Woltom traje od 07.12.2018., a danas smo prvi po aktivnim dostavljačima za navedenu platformu. Već 3 godine kontinuirano rastemo. Djelujemo u preko 10 gradova diljem Republike Hrvatske: Zagreb, Rijeka, Osijek itd. Posjedujemo vlastitu flotu različitih vozila koja su na raspolaganju našim dostavljačima. Više od 300 zadovoljnih dostavljača najbolji su pokazatelj našeg pouzdanog i sigurnog radnog okruženja.</p>
     
     
     </div>
 
 
     <div class="content">
-        <h1 class="headerContent">
+        <h1 class="headerContent" id="about-us-page-our-team-header">
             UPOZNAJ NAŠ TIM!
         </h1>
         <img src="Slike/LineDevider.svg" loading="lazy" alt="" id="deviderLine" class="devider">
@@ -165,29 +181,29 @@
                 <h5>Fleet specialist (Wolt & Glovo Osijek)</h5>
             </div>
         </div>
-        <a href="kontakt.html">     <button class="mainCta">Kontaktiraj nas</button></a>
+        <a href="kontakt.html">     <button class="mainCta" id="contact-us-button">Kontaktiraj nas</button></a>
 
     </div>
 
     <div class="content"> 
-        <h1 class="linesOnSide">MI SMO REVE</h1>
+        <h1 class="linesOnSide" id="we-are-reve-header">MI SMO REVE</h1>
        
 
         <div class="info">
 
             <div class="info__oNama">
                 <div class="transparent-border"></div>
-                <h3 class="naslov">Nagradne igre
+                <h3 class="naslov" id="we-are-reve-first-box-header">Nagradne igre
                 </h3>
-                <p> Kod nas nikada nije dosadno, a to mogu potvrditi i naši dostavljači za koje redovito organiziramo nagradne igre kako bismo ih dodatno motivirali i pokazali im da cijenimo njihov rad. U nagradnim igrama mogu sudjelovati svi dostavljači Reve dostave tako da požuri sa prijavom i igraj se s nama! 
+                <p id="we-are-reve-first-box-text"> Kod nas nikada nije dosadno, a to mogu potvrditi i naši dostavljači za koje redovito organiziramo nagradne igre kako bismo ih dodatno motivirali i pokazali im da cijenimo njihov rad. U nagradnim igrama mogu sudjelovati svi dostavljači Reve dostave tako da požuri sa prijavom i igraj se s nama! 
 
                 </p>
 
             </div>
             <div class="info__više">
                 <div class="transparent-border"></div>
-                <h3 class="naslov">Edukacije</h3>
-                <p> Tim voditelja Reve dostave uvijek vodi računa o tome da naši dostavljači budu educirani o platformi preko koje dostavljaju. Zato održavamo edukacije u kojima ih uvodimo u sam način rada platforme, a kako se platforme mijenjaju, tako i mi želimo da svi naši zaposlenici uvijek budu u toku s novitetima.
+                <h3 class="naslov" id="we-are-reve-second-box-header">Edukacije</h3>
+                <p id="we-are-reve-second-box-text">  Tim voditelja Reve dostave uvijek vodi računa o tome da naši dostavljači budu educirani o platformi preko koje dostavljaju. Zato održavamo edukacije u kojima ih uvodimo u sam način rada platforme, a kako se platforme mijenjaju, tako i mi želimo da svi naši zaposlenici uvijek budu u toku s novitetima.
  
 
                 </p>
@@ -207,8 +223,8 @@
         <section class="prijava">
     
             <div>
-                <h1>PRIJAVI SE</h1>
-                <h5>U samo dvije minute!</h5>
+                <h1 id="sign-up-page-header">PRIJAVI SE</h1>
+                <h5 id="sign-up-page-sub-header">U samo dvije minute!</h5>
     
             </div>
             
@@ -229,7 +245,7 @@
                     <textarea name="message" placeholder="Poruka" id="message" cols="20" rows="7"></textarea>
                 </div>
         
-                <button type="submit" class="mainCta">Prijavi se</button>
+                <button type="submit" class="mainCta sign-up-button">Prijavi se</button>
                 <div class="success-message hidden">Your form was sent successfully!</div>
             </form>
         
@@ -246,8 +262,8 @@
             <div class="footer__top__leftSide">
                 <ul class="links">
                     
-                    <li><a href="pravilnikORadu.html">Pravilnik o radu</a></li>
-                    <li><a href="oNama.html">O nama</a></li>
+                    <li><a href="pravilnikORadu.html" id="rules-of-procedure-page">Pravilnik o radu</a></li>
+                    <li><a href="oNama.html" id="about-us-page-link">O nama</a></li>
                 </ul>
                 <!-- 
                     <ul class="dodatniLinkovi">
@@ -263,7 +279,7 @@
                 <ul class="info">
                     <li class="dodatniLinkovi">
                         <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2780.958377066166!2d15.914880551083929!3d45.81209197900403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d13a98a1cfd1%3A0x40d20054db8fc902!2sRoginina%20ul.%206%2C%2010000%2C%20Zagreb!5e0!3m2!1sen!2shr!4v1635509000589!5m2!1sen!2shr" target=”_blank” >
-                            <img src="Slike/LocationIcon.svg" loading="lazy" alt="Lokacija reve-dostava reve">
+                            <img src="Slike/LocationIcon.svg" loading="lazy" alt="Lokacija reve ureda">
                             
 
 
@@ -274,14 +290,14 @@
     
                     <li>
                         <a href="https://wa.me/+385916192520" target=”_blank”>
-                            <img src="Slike/PhoneIcon.svg" loading="lazy" alt="Broj mobitela reve-dostava reve">
+                            <img src="Slike/PhoneIcon.svg" loading="lazy" alt="Broj mobitela">
                             <span>+385 91 6192 520</span> 
                         </a>
                     </li>
     
                     <li>
                         <a href="mailto:info@reve-dostava.com" target=”_blank”>
-                            <img src="Slike/MailIcon.svg" loading="lazy" alt="mail reve-dostava reve">
+                            <img src="Slike/MailIcon.svg" loading="lazy" alt="reve dostava email">
                             <span>info@reve-dostava.com</span>   
                         </a>
                     </li>
@@ -295,20 +311,20 @@
         <div class="footer__bottom">
             <div class="socials">
                 <a href="https://www.instagram.com/revedostava/?hl=en">
-                    <img src="Slike/InstagramIcon.svg" loading="lazy" alt="reve-dostava reve instagram icon">
+                    <img src="Slike/InstagramIcon.svg" loading="lazy" alt="instagram icon">
                 </a>
                 <a href="https://www.facebook.com/revedostavahr/">
-                    <img src="Slike/FacebookIcon.svg" loading="lazy" alt="reve-dostava reve facebook icon">
+                    <img src="Slike/FacebookIcon.svg" loading="lazy" alt="facebook icon">
                 </a>
             </div>
             <div class="copyright">
-                <span>© 2016 - 2021 Reve.com - All Rights Reserved.</span>
+                <span>© 2016 - 2022 Reve-dostava.com - All Rights Reserved.</span>
             </div>
     
         </div>
     
     
     </footer>
-
+    <script src="lang__about.js"></script>
 
     </body>

@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Reve dostava - Vozni park</title>
-        <meta name="description" content="Reve dostava je vodeći hrvatski partner za platforme Glovo i Wolt. Posjedujemo vlastitu flotu vozila koja su na raspolaganju svim našim dostavljačima."></head>
+        <title>Vozni park</title>
+        <meta name="description" content="Posjedujemo vlastitu flotu vozila koja su na raspolaganju svim našim dostavljačima."></head>
 
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,6 +18,9 @@
     
 
                 <!-- SCRIPT LOADER -->
+
+
+                
     <script type="text/javascript">
         window.addEventListener("load", function () {
             const mainScript = document.createElement("script");
@@ -33,15 +36,31 @@
     </script>
     </head>
 <body>
+
+    <div  class="lang-change">
+        <img src="Slike/earth.png" alt="" class="earth-icon">
+         <div>
+              <ul class="lang-change__dropdown">
+                  <li class="active-lang" onClick="changeLanguage('eng')">
+                      <a href="#" class="eng">Engish</a>
+                     </li>
+                     <li onClick="changeLanguage('hr')">
+                         <a href="#" class="hr">Croatian</a>
+                     </li>
+ 
+         </div>
+     </div>
+
+     
     <header>
-        <a href="index.html"><img src="Slike/LogoYellow.svg" loading="lazy" class="logo" alt="reve-dostava reve logo"></a>
+        <a href="index.html"><img src="Slike/LogoYellow.svg" loading="lazy" class="logo" alt="reve-dostava logo"></a>
         <ul class="hide-for-tablet">
-            <li><a href="index.html">Početna</a></li>
-            <li><a href="oNama.html" >O Nama</a></li>
-            <li><a href="kontakt.html">Kontakti</a></li>
-            <li><a href="vozniPark.html" class="active">Vozni park</a></li>  
+            <li><a href="index.html" id="home-page-link">Početna</a></li>
+            <li><a href="oNama.html" id="about-us-page-link">O Nama</a></li>
+            <li><a href="kontakt.html" id="contact-us-page-link">Kontakti</a></li>
+            <li><a href="vozniPark.html" id="vehicle-fleet-page-link" class="active">Vozni park</a></li>  
         </ul>
-        <a class="mainCta hide-for-tablet" id="prijaviSeButton" href="#">Prijavi se</a>
+        <a class="mainCta hide-for-tablet sign-up-button" id="prijaviSeButton"  href="#">Prijavi se</a>
     </header>
     <div id="btnHamburger" class="hamburgerMenu hide-for-desktop">
         <span></span>
@@ -53,10 +72,10 @@
     <div class="backgroundMobileMenu hide-for-desktop">
         <div>
             <ul class="mobileNav">
-                <li><a href="index.html">Početna</a></li>
-                <li><a href="oNama.html">O Nama</a></li>
-                <li><a href="kontakt.html">Kontakti</a></li>
-                <li><a href="vozniPark.html">Vozni park</a></li>
+                <li><a href="index.html" id="home-page-link">Početna</a></li>
+                <li><a href="oNama.html" id="about-us-page-link">O Nama</a></li>
+                <li><a href="kontakt.html" id="contact-us-page-link">Kontakti</a></li>
+                <li><a href="vozniPark.html" id="vehicle-fleet-page-link">Vozni park</a></li>
                 <li><a href="prijaviSe.html">Prijavi se</a></li>
             </ul>
         </div>
@@ -64,20 +83,20 @@
     <div class="darkOverlay"></div>
     <div class="heroContainer">
         <div class="heroContainer__text">
-            <h1 class="posebanHeader">BIRAJ AUTO KOJIM ŽELIŠ DOSTAVLJATI
+            <h1 class="posebanHeader" id="vehicle-fleet-page-header">Biraj auto kojim želiš voziti
                 </h1>
-                <p>U našoj ponudi automobila se nalazi nekoliko različitih modela kako bismo se što bolje
+                <p id="vehicle-fleet-page-text">U našoj ponudi automobila se nalazi nekoliko različitih modela kako bismo se što bolje
                     prilagodili potrebama naših dostavljača. Naša flota kontinuirano raste zbog povećanog obujma
                     posla, a uskoro ćemo u ponudi imati električne bicikle i skutere.</p>
     
-                    <a href="mailto:info@reve-dostava.com" target=”_blank”> <button class="mainCta">Pošalji poruku</button> </a>
+                    <a href="mailto:info@reve-dostava.com" target=”_blank”> <button class="mainCta" id="contact-us-button">Pošalji poruku</button> </a>
         </div>
         <div class="heroContainerImage">
             <div class="heroContainer__image">
                 <img  srcset="Slike/parking-small 350w, 
                 Slike/parking-big.webp 1500w" 
                 sizes="(max-width: 800px) 350w, 1500w" 
-                src="Slike/parking-big.webp" loading="lazy" alt="reve-dostava reve vozila parking">
+                src="Slike/parking-big.webp" loading="lazy" alt="reve-dostava vozni park">
             </div>
         </div>
 
@@ -89,44 +108,44 @@
                 <img  srcset="autoSlike/reve-auto-01-small.webp 350w, 
                 autoSlike/reve-auto-01-big.webp 1500w" 
                 sizes="(max-width: 800px) 350w, 1500w" 
-                src="Slike/reve-auto-01-big.webp" loading="lazy" alt="reve-dostava reve vozilo dostavljač">
+                src="Slike/reve-auto-01-big.webp" loading="lazy" alt="reve dostava vozilo dostavljača Toyota">
             </div>
             <div class="item">
                 <img  srcset="autoSlike/reve-auto-02-small.webp 350w, 
                 autoSlike/reve-auto-02-big.webp 1500w" 
                 sizes="(max-width: 800px) 350w, 1500w" 
-                src="autoSlike/reve-auto-02-big.webp" loading="lazy" alt="reve-dostava reve vozilo dostavljač">
+                src="autoSlike/reve-auto-02-big.webp" loading="lazy" alt="reve dostava vozilo dostavljača Toyota">
             </div>
             <div class="item">
                 <img  srcset="autoSlike/reve-auto-03-small.webp 350w, 
                 autoSlike/reve-auto-03-big.webp 1500w" 
                 sizes="(max-width: 800px) 350w, 1500w" 
-                src="autoSlike/reve-auto-03-big.webp" loading="lazy" alt="reve-dostava reve vozilo dostavljač">
+                src="autoSlike/reve-auto-03-big.webp" loading="lazy" alt="reve dostava vozilo dostavljača Opel">
             </div>
             <div class="item">       
                 <img  srcset="autoSlike/reve-auto-04-small.webp 350w, 
                 autoSlike/reve-auto-04-big.webp 1500w" 
                 sizes="(max-width: 800px) 350w, 1500w" 
-                src="autoSlike/reve-auto-04-big.webp" loading="lazy" alt="reve-dostava reve vozilo dostavljač">
+                src="autoSlike/reve-auto-04-big.webp" loading="lazy" alt="reve dostava vozilo dostavljača Opel">
             </div>
             <div class="item">     
                 <img  srcset="autoSlike/reve-auto-05-small.webp 350w, 
                 autoSlike/reve-auto-05-big.webp 1500w" 
                 sizes="(max-width: 800px) 350w, 1500w" 
-                src="autoSlike/reve-auto-05-big.webp" loading="lazy" alt="reve-dostava reve vozilo dostavljač">
+                src="autoSlike/reve-auto-05-big.webp" loading="lazy" alt="reve dostava vozilo dostavljača Opel">
             </div>
             <div class="item">
                 <img  srcset="autoSlike/reve-auto-06-small.webp 350w, 
                 autoSlike/reve-auto-06-big.webp 1500w" 
                 sizes="(max-width: 800px) 350w, 1500w" 
-                src="autoSlike/reve-auto-06-big.webp" loading="lazy" alt="reve-dostava reve vozilo dostavljač">
+                src="autoSlike/reve-auto-06-big.webp" loading="lazy" alt="reve dostava vozilo dostavljača Toyota">
             </div>
         </div>
     </div>
     <div class="textSection">
-        <h1>Izbor od 40+ automobila</h1>
+        <h1 id="vehicle-fleet-page-fleet-section-header">Izbor od 40+ automobila</h1>
     
-            <p>Naša flota se povećava kako nam raste broj zaposlenika. Ovisno o tvojim potrebama možeš izabrati neki od 3 modela koji se nalaze u našoj ponudi. Za maksimalnu udobnost u vožnji nudimo Opel Astru, a za malu potrošonju pri gradskoj vožnji tu su naše Toyote Aygo. 
+            <p id="vehicle-fleet-page-fleet-section-text">Naša flota se povećava kako nam raste broj zaposlenika. Ovisno o tvojim potrebama možeš izabrati neki od 3 modela koji se nalaze u našoj ponudi. Za maksimalnu udobnost u vožnji nudimo Opel Astru, a za malu potrošonju pri gradskoj vožnji tu su naše Toyote Aygo. 
             </p>
     </div>
 </div>
@@ -139,8 +158,8 @@
     </button>
     <section class="prijava">
         <div>
-            <h1>PRIJAVI SE</h1>
-            <h5>U samo dvije minute!</h5>
+            <h1 id="sign-up-page-header">PRIJAVI SE</h1>
+            <h5 id="sign-up-page-sub-header">U samo dvije minute!</h5>
         </div>
 
         <form action="https://formspree.io/f/mnqwaggg" method="POST">
@@ -172,8 +191,8 @@
         <div class="footer__top__leftSide">
             <ul class="links">
           
-                <li><a href="pravilnikORadu.html">Pravilnik o radu</a></li>
-                <li><a href="oNama.html">O nama</a></li>
+                <li><a href="pravilnikORadu.html" id="rules-of-procedure-page">Pravilnik o radu</a></li>
+                <li><a href="oNama.html" id="about-us-page-link">O nama</a></li>
             </ul>
             <!-- 
                 <ul class="dodatniLinkovi">
@@ -188,21 +207,21 @@
             <ul class="info">
                 <li class="dodatniLinkovi">
                     <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2780.958377066166!2d15.914880551083929!3d45.81209197900403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d13a98a1cfd1%3A0x40d20054db8fc902!2sRoginina%20ul.%206%2C%2010000%2C%20Zagreb!5e0!3m2!1sen!2shr!4v1635509000589!5m2!1sen!2shr" target=”_blank” >
-                        <img src="Slike/LocationIcon.svg"  loading="lazy" alt="Lokacija reve-dostava reve">
+                        <img src="Slike/LocationIcon.svg"  loading="lazy" alt="Lokacija reve ureda">
                         
                         <span>Roginina 6, Zagreb</span>
                      </a>
                 </li>
                 <li>
                     <a href="https://wa.me/+385916192520" target=”_blank”>
-                        <img src="Slike/PhoneIcon.svg" loading="lazy" alt="Broj mobitela reve-dostava reve">
+                        <img src="Slike/PhoneIcon.svg" loading="lazy" alt="Broj mobitela">
                         <span>+385 91 6192 520</span> 
                     </a>
                 </li>
 
                 <li>
                     <a href="mailto:info@reve-dostava.com" target=”_blank”>
-                        <img src="Slike/MailIcon.svg"  loading="lazy" alt="Mail reve-dostava reve">
+                        <img src="Slike/MailIcon.svg"  loading="lazy" alt="Reve dosatva email">
                         <span>info@reve-dostava.com</span>   
                     </a>
                 </li>
@@ -212,20 +231,22 @@
     <div class="footer__bottom">
         <div class="socials">
             <a href="https://www.instagram.com/revedostava/?hl=en">
-                <img src="Slike/InstagramIcon.svg" loading="lazy" alt="reve-dostava reve instagram icon">
+                <img src="Slike/InstagramIcon.svg" loading="lazy" alt="instagram icon">
             </a>
             <a href="https://www.facebook.com/revedostavahr/">
-                <img src="Slike/FacebookIcon.svg" loading="lazy" alt="reve-dostava reve facebook icon">
+                <img src="Slike/FacebookIcon.svg" loading="lazy" alt="facebook icon">
             </a>
         </div>
         <div class="copyright">
-            <span>© 2016 - 2021 Reve.com - All Rights Reserved.</span>
+            <span>© 2016 - 2022 Reve-dostava.com - All Rights Reserved.</span>
         </div>
     </div>
 </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+
 <script src="carousel.js"></script>
+<script src="lang__fleet.js"></script>
 </body>
 </html>
