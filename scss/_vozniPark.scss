@@ -1,0 +1,96 @@
+.carouselSection {
+  width: 100%;
+  background-color: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  padding: 8rem 5rem 5rem 5rem;
+  margin-top: 5rem;
+
+
+
+@include breakpoint-down(medium){
+  padding: 8rem 2rem 5rem 2rem;
+  margin-top: 3rem;
+}
+@include breakpoint-down(small){
+  padding: 7rem 2rem 3rem 2rem;
+  margin-top: 4rem;
+}
+
+  .containerForCarousel {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .textSection {
+    display: flex;
+
+    padding: 6rem 0;
+    width: 100%;
+
+    @include breakpoint-down(medium){
+      padding: 4rem 0;
+      flex-direction: column;
+      text-align: center;
+  
+  }
+
+    h1 {
+      width: 30%;
+      font-size: var(--fs-600);
+      font-weight: 300;
+      font-style: italic;
+      margin-top: 0;
+      @include breakpoint-down(medium){
+        width: 100%;
+        margin-bottom: 2rem;
+    
+    }
+    }
+     
+    p {
+      line-height: 1.8;
+      font-size: var(--fs-300);
+      width: 55%;
+      margin-left: 2rem;
+      margin-top: 1rem;
+
+      @include breakpoint-down(medium){
+        margin-left: 0rem;
+        margin-top: 0;
+        width: 100%;
+        font-size: var(--fs-300);
+    
+    }
+    }
+  }
+
+}
+
+
+.owl-carousel .owl-nav button.owl-next,.owl-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    width: 100px;
+
+      &:hover {
+      background-color: transparent;
+      color: $mainYellow;
+      }
+      span {
+        font-size: 80px;
+        z-index: 10;
+  }
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  top:50%;
+  right:-80px;
+  margin-top: -65px;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  top:50%;
+  left:-80px;
+  margin-top: -65px;
+}

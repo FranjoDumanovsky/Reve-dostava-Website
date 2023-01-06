@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prijavi se i iskusi posao reve dostavljača već danas!"></head>
+
+    <title>Postani Reve vozač - prijavi se!</title>
+
+<meta name=”robots” content="index, follow">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<!-- SCRIPT LOADER -->
+            <script type="text/javascript">
+                window.addEventListener("load", function () {
+                    const mainScript = document.createElement("script");
+                    const prijavaScript = document.createElement("script");
+                    mainScript.src = "script.js";
+                    prijavaScript.src = "prijava.js";
+                    document.body.appendChild(mainScript);
+                    document.body.appendChild(prijavaScript);
+            });
+            </script>
+</head>
+<body>
+
+
+    <div  class="lang-change">
+        <img src="Slike/earth.png" alt="" class="earth-icon">
+         <div>
+              <ul class="lang-change__dropdown">
+                  <li class="active-lang" onClick="changeLanguage('eng')">
+                      <a href="#" class="eng">Engish</a>
+                     </li>
+                     <li onClick="changeLanguage('hr')">
+                         <a href="#" class="hr">Croatian</a>
+                     </li>
+ 
+         </div>
+     </div>
+ 
+<!-- DESKTOP NAVIGATION-->
+    <header>
+        <a href="#"><img src="Slike/LogoYellow.svg" class="logo" alt="reve-dostava logo"></a>
+        <ul class="hide-for-tablet">
+            <li><a href="index.html" id="home-page-link">Početna</a></li>
+            <li><a href="oNama.html" id="about-us-page-link">O Nama</a></li>
+            <li><a href="kontakt.html" id="contact-us-page-link">Kontakti</a></li>
+            <li><a href="vozniPark.html" id="vehicle-fleet-page-link">Vozni park</a></li>         
+        </ul>
+        <a class="mainCta hide-for-tablet"  href="prijaviSe.html">Prijavi se</a>
+    </header>
+    <div id="btnHamburger" class="hamburgerMenu hide-for-desktop">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+<!--  MOBILE NAVIGATION -->
+    <!--  HAMBURGER MENU STYLE -->
+    <div class="backgroundMobileMenu hide-for-desktop">
+        <div>
+            <ul class="mobileNav">
+                <li><a href="index.html" id="home-page-link">Početna</a></li>
+                <li><a href="oNama.html" id="about-us-page-link">O Nama</a></li>
+                <li><a href="kontakt.html" id="contact-us-page-link">Kontakti</a></li>
+                <li><a href="vozniPark.html" id="vehicle-fleet-page-link">Vozni park</a></li>
+                <li><a href="prijaviSe.html" class="sign-up-page-link">Prijavi se</a></li>
+            </ul>
+        </div>
+    </div>
+<div class="prijaviSeContainer">
+    <section class="prijava" id="prijava">
+        <div>
+            <h1 id="sign-up-page-header">PRIJAVI SE</h1>
+            <h5 id="sign-up-page-sub-header">U samo dvije minute!</h5>
+            <p id="sign-up-page-text">Želiš se prijaviti na Wolt ili Glovo? <br>
+                Naš tim će te kontaktirati u najkraćem mogućem roku.</p> 
+        </div> 
+        <form action="https://formspree.io/f/mnqwaggg" method="POST">
+            <div class="form-group">
+                <input type="text" placeholder="Ime i prezime" id="name" name="name">
+                <div class="error-hint hidden">Your name is required.</div>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="E-mail" id="email" name="email">
+                <div class="error-hint hidden">Your email is invalid.</div>
+            </div>
+            <div class="form-group">
+                <input type="number" placeholder="Mobitel" id="phone" name="phone">
+                <div class="error-hint hidden">Phone Number</div>
+            </div>
+            <div class="form-group">
+                <textarea name="message" placeholder="Poruka" id="message" cols="20" rows="7"></textarea>
+            </div>
+    
+            <button type="submit" class="mainCta sign-up-button">Prijavi se</button>
+            <div class="success-message hidden">Your form was sent successfully!</div>
+        </form>
+    </section>
+</div>
+<footer class="footer">
+    
+    <div class="adresa">Roginina 6, Zagreb</div>
+    <div class="footer__top">
+        <div class="footer__top__leftSide">
+            <ul class="links">
+               
+                <li><a href="pravilaPrivatnosti.html" id="privacy-policy-page">Pravila Privatnosti</a></li>
+                <li><a href="pravilnikORadu.html" id="rules-of-procedure-page">Pravilnik o radu</a></li>
+                <li><a href="oNama.html" id="about-us-page-link">O nama</a></li>
+            </ul>
+            <!-- 
+                <ul class="dodatniLinkovi">
+                <li><a href="">Dodatan link 1</a></li>
+                <li><a href="">Dodatan link 2</a></li>
+                <li><a href="">Dodatan link 3</a></li>
+            </ul>
+            --> 
+        </div>
+        <div class="footer__top__rightSide">
+            <ul class="info">
+                <li class="dodatniLinkovi">
+                    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2780.958377066166!2d15.914880551083929!3d45.81209197900403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d13a98a1cfd1%3A0x40d20054db8fc902!2sRoginina%20ul.%206%2C%2010000%2C%20Zagreb!5e0!3m2!1sen!2shr!4v1635509000589!5m2!1sen!2shr" target=”_blank” >
+                        <img src="Slike/LocationIcon.svg" loading="lazy" alt="Reve lokacija">
+                        
+                        <span>Roginina 6, Zagreb</span>
+                     </a>
+                </li>
+
+                <li>
+                    <a href="https://wa.me/+385916192520" target=”_blank”>
+                        <img src="Slike/PhoneIcon.svg"  loading="lazy" alt="Broj mobitela">
+                        <span>+385 91 6192 520</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:info@reve-dostava.com" target=”_blank”>
+                        <img src="Slike/MailIcon.svg" loading="lazy" alt="Reve dostava email">
+                        <span>info@reve-dostava.com</span>   
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="socials">
+            <a href="https://www.instagram.com/revedostava/?hl=en">
+                <img src="Slike/InstagramIcon.svg" loading="lazy" alt="Instagram Icon">
+            </a>
+            <a href="https://www.facebook.com/revedostavahr/">
+                <img src="Slike/FacebookIcon.svg" loading="lazy" alt="Facebook icon">
+            </a>
+        </div>
+        <div class="copyright">
+            <span>© 2016 - 2022 Reve-dostava.com - All Rights Reserved.</span>
+        </div>
+    </div>
+</footer>
+
+<script src="lang__prijava.js"></script>
+</body>
+</html>
+    

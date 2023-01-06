@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tražiš posao dostavljača? Reve dostava je vodeći hrvatski partner za platforme Glovo i Wolt. Posjedujemo vlastitu flotu vozila koja su na raspolaganju svim našim dostavljačima."></head>
+    <title>Reve Dostava</title>
+
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+
+        <!-- SCRIPT LOADER -->
+    <script type="text/javascript">
+        window.addEventListener("load", function () {
+        const mainScript = document.createElement("script");
+        const locScript = document.createElement("script");
+        const prijavaScript = document.createElement("script");
+
+
+        mainScript.src = "script.js";
+        locScript.src = "location.js";
+        prijavaScript.src = "prijava.js";
+  
+
+
+        document.body.appendChild(mainScript);
+        document.body.appendChild(locScript);
+        document.body.appendChild(prijavaScript);
+
+        
+});
+    
+</script>
+
+
+</head>
+<body>
+
+
+    <div  class="lang-change">
+       <img src="Slike/earth.png" alt="" class="earth-icon">
+        <div>
+             <ul class="lang-change__dropdown">
+                 <li class="active-lang" onClick="changeLanguage('eng')">
+                     <a href="#" class="eng">Engish</a>
+                    </li>
+                    <li onClick="changeLanguage('hr')">
+                        <a href="#" class="hr">Croatian</a>
+                    </li>
+
+        </div>
+    </div>
+
+
+
+
+
+<div id="logo"  class="logoAnimation">
+    <img src="Slike/LogoYellow.svg" alt="reve-dostava reve logo">
+ 
+</div>
+
+
+
+<!-- DESKTOP NAVIGATION-->
+
+    <header>
+        <a href="index.html"><img src="Slike/LogoYellow.svg" class="logoAnimation2" alt="reve dostava logo2"></a>
+        <ul class="hide-for-tablet">
+            <li><a class="active" href="index.html" id="home-page-link">Početna</a></li>
+            <li><a href="oNama.html" id="about-us-page-link">O Nama</a></li>
+            <li><a href="kontakt.html" id="contact-us-page-link">Kontakti</a></li>
+            <li><a href="vozniPark.html" id="vehicle-fleet-page-link">Vozni park</a></li>
+           
+        </ul>
+        <a class="mainCta hide-for-tablet sign-up-button" href="#prijava" >Prijavi se</a>
+
+
+    </header>
+    <div id="btnHamburger" class="hamburgerMenu hide-for-desktop">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="backgroundAnimation"></div>
+
+<!--  MOBILE NAVIGATION -->
+
+
+
+    <!--  HAMBURGER MENU STYLE -->
+
+
+    <div class="backgroundMobileMenu hide-for-desktop">
+        <div>
+            <ul class="mobileNav">
+                <li><a href="index.html" id="home-page-link">Početna</a></li>
+                <li><a href="oNama.html" id="about-us-page-link">O Nama</a></li>
+                <li><a href="kontakt.html" id="contact-us-page-link">Kontakti</a></li>
+                <li><a href="vozniPark.html" id="vehicle-fleet-page-link">Vozni park</a></li>
+                <li><a href="prijaviSe.html"  id="sign-up-page-link">Prijavi se</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+<div class="banner">
+    <h1 id="hero-section-header">Postani Reve
+
+        <span id="yellowText">dostavljač</span>
+    </h1>
+    
+    <p id="hero-section-text">Prijavi se i postani Reve dostavljač! Vozi svoje vozilo ili odaberi nešto iz naše flote, dostavljaj na
+        puno radno vrijeme ili kao dodatan posao - ti biraš!
+    </p>
+    <div>
+        <a class="mainCta sign-up-button" href="#prijava">Prijavi se</a>
+        <a class="altCta" href="oNama.html" id="more-button">Saznaj Više</a>
+    </div>
+</div>
+
+
+
+
+<!--  CONTENT SECTIONS -->
+<div class="weave">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#e9e9e9" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+      </svg>
+</div>
+
+
+<div class="backgroundAnimation"></div>
+
+
+<div class="progress">
+    <div class="progress-value"></div>
+</div>
+
+
+
+<div class="content">
+    <h1 class="maxChar" id="welcome-header">POSTANI DIO NAŠEG TIMA</h1>
+    <h3 class="bMg" id="welcome-sub-header">PRIJAVI SE VEĆ DANAS</h3>
+
+<div class="curved">
+    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1440 313">
+        <path fill="#EFC319" class="hide-for-mobile" fill-opacity="1" d="M0,160L120,138.7C240,117,480,75,720,90.7C960,107,1200,181,1320,218.7L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+        </path>
+    </svg>
+    <div class="container container__cards pogodnosti">
+        
+        <div class="pogodnosti__card">
+            <img src="Slike/Brza-prijava.png" loading="lazy" alt="Brza prijava za posao dostavljača">
+            <div class="text">
+                <h5 id="welcome-first-card-header">Brza prijava</h5>
+                <p id="welcome-first-card-text">Prijava u roku par 
+                    minuta!</p>
+            </div>
+        </div>
+
+        <div class="pogodnosti__card">  
+            <img src="Slike/naša-vozila.jpeg" loading="lazy" alt="Reve vozilo auto">
+            <div class="text">
+                <h5 id="welcome-second-card-header">Naša vozila</h5>
+                <p id="welcome-second-card-text">Biraj između 30 automobila 
+                Iz našeg voznog parka</p>
+            </div>
+        </div>
+
+        <div class="pogodnosti__card">
+            <img src="Slike/fleksibilan-rad.jpeg" alt="Fleksibilno radno vrijeme reve dostavljača">
+            <div class="text">
+                <h5 id="welcome-third-card-header">Fleksibilnost</h5>
+                <p id="welcome-third-card-text">Sam biraš svoje radno
+                    vrijeme</p>
+            </div>
+        </div>
+    </div>
+    <a href="oNama.html">    
+            <button class="" id="more-button">
+                Saznaj više!
+            </button>
+    </a>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="rotatedWeave" viewBox="0 0 1440 320">
+
+        <path fill="#EFC319" class="hide-for-mobile" fill-opacity="1" d="M0,192L120,165.3C240,139,480,85,720,80C960,75,1200,117,1320,138.7L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+</div>
+</div>
+<img src="Slike/LineDevider.svg" loading="lazy" alt="linija" class="devider">
+
+
+<div class="content">
+
+    <h1 id="about-us-section-header">TKO SMO MI</h1>
+    <p class="textAlignCenter" id="about-us-section-text">Više od 300 zadovoljnih akitvnih dostavljača najbolji su pokazatelj našeg pouzdanog i sigurnog radnog okruženja.
+
+
+    </p>
+
+    <div class="container container__links">
+        <a href="oNama.html" class="box">
+            <div class="textOverlay"></div>
+            <h2 id="about-us-section-first-card">Naš tim</h2>
+            <img  srcset="Slike/PeopleImg-small.webp 350w, 
+            Slike/PeopleImg-big.webp 1500w" 
+            sizes="(max-width: 800px) 350w, 1500w" 
+            src="Slike/PeopleImg-big.webp" loading="lazy" alt="Reve ured s ljudima">
+        </a>
+
+        <a class="box" href="vozniPark.html">
+            <div class="textOverlay"></div>
+            <h2 id="about-us-section-second-card">Vozni park</h2>
+            <img  srcset="Slike/CarImg-small.webp 350w, 
+            Slike/CarImg-big.webp 1500w" 
+            sizes="(max-width: 800px) 350w, 1500w" 
+            src="Slike/CarImg-big.webp" loading="lazy" alt="Reve garaža sa autima">
+
+        </a>
+    </div>
+</div>
+
+<img src="Slike/LineDevider.svg" loading="lazy" class="devider">
+
+
+
+<div class="content">
+    <h1 id="location-section-header">PRONAĐITE NAS NA 
+       <br>LOKACIJI</br>
+    </h1>
+
+        <div class="locationButtons">
+            <button class="locButton active" id="zagrebButton">ZAGREB</button>
+                <hr>
+                <button class="locButton" id="splitButton">SPLIT<span class="kaleta">kaleta 2</span></button>
+                <hr>
+                <button class="locButton" id="osijekButton">OSIJEK</button>
+                <hr>
+                <button class="locButton" id="rijekaButton">RIJEKA</button>
+        </div>
+
+        <div class="map">
+            <div id="rijekaMap"> 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22493.685001809914!2d14.385286781439508!3d45.34513930949578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4764a6f2170353df%3A0x47768567e355ca3!2sPrimorska%20ul.%203b%2C%2051000%2C%20Rijeka%2C%20Croatia!5e0!3m2!1sen!2spl!4v1647710867656!5m2!1sen!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div id="zagrebMap"> 
+                <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44186.17761950053!2d15.873875156474055!3d45.81436116931415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d13a98a1cfd1%3A0x40d20054db8fc902!2sRoginina%20ul.%206%2C%2010000%2C%20Zagreb!5e0!3m2!1sen!2shr!4v1637334620436!5m2!1sen!2shr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div id="osijekMap"> 
+                <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11173.476606353202!2d18.665766759155876!3d45.563014639338746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ce709bc4ba495%3A0xfafcc53747f59e29!2sGornjodravska%20obala%2088%2C%2031000%2C%20Osijek!5e0!3m2!1sen!2shr!4v1637334808653!5m2!1sen!2shr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>        
+            </div>
+            <div id="splitMap"> 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.7413191970886!2d16.46469511517357!3d43.50773166984364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13355e224c42ac15%3A0x50cc7de8ea597df!2zVWwuIFJ1xJFlcmEgQm_FoWtvdmnEh2EgMTMsIDIxMDAwLCBTcGxpdA!5e0!3m2!1sen!2shr!4v1651779509991!5m2!1sen!2shr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>        
+            </div>
+        </div>
+            <a href="kontakt.html"><button  id="contact-us-button" class="darkBtn poruka">Javi nam se!
+                
+            </button>
+        </a>   
+        
+</div>
+
+
+
+
+<div class="linije">
+    <img src="Slike/Linije.svg" loading="lazy" alt="linija">
+</div>
+
+<section class="prijava" id="prijava">
+
+    <div>
+        <h1 id="sign-up-page-header">PRIJAVI SE</h1>
+        <h5 id="sign-up-page-sub-header">U samo dvije minute!</h5>
+        <p id="sign-up-page-text"> Želiš se prijaviti na Wolt ili Glovo? <br>
+            Naš tim će te kontaktirati u najkraćem mogućem roku.</p> 
+    </div>
+    
+    <form action="https://formspree.io/f/mnqwaggg" method="POST">
+        <div class="form-group">
+            <input type="text" placeholder="Ime i prezime" id="name" name="name">
+            <div class="error-hint hidden">Ime je neispravno.</div>
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="E-mail" id="email" name="email">
+            <div class="error-hint hidden">Email je neispravan.</div>
+        </div>
+        <div class="form-group">
+            <input type="number" placeholder="Mobitel" id="phone" name="phone">
+            <div class="error-hint hidden">Phone Number</div>
+        </div>
+        <div class="form-group">
+            <textarea name="message" placeholder="Poruka" id="message" cols="20" rows="7"></textarea>
+        </div>
+
+        <button type="submit" class="mainCta sign-up-button" >Prijavi se</button>
+        <div class="success-message hidden">Your form was sent successfully!</div>
+    </form>
+
+</section>
+
+
+<footer class="footer">
+
+    <div class="adresa">Roginina 6, Zagreb</div>
+    <div class="footer__top">
+        <div class="footer__top__leftSide">
+            <ul class="links">
+                
+                <li><a href="pravilaPrivatnosti.html" id="privacy-policy-page">Pravila Privatnosti</a></li>
+                <li><a href="pravilnikORadu.html" id="rules-of-procedure-page">Pravilnik o radu</a></li>
+                <li><a href="oNama.html" id="about-us-page-link">O nama</a></li>
+            </ul>
+            <!-- 
+                <ul class="dodatniLinkovi">
+                <li><a href="">Dodatan link 1</a></li>
+                <li><a href="">Dodatan link 2</a></li>
+                <li><a href="">Dodatan link 3</a></li>
+            </ul>
+            --> 
+
+        </div>
+
+        <div class="footer__top__rightSide">
+            <ul class="info">
+                <li class="dodatniLinkovi">
+                    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2780.958377066166!2d15.914880551083929!3d45.81209197900403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d13a98a1cfd1%3A0x40d20054db8fc902!2sRoginina%20ul.%206%2C%2010000%2C%20Zagreb!5e0!3m2!1sen!2shr!4v1635509000589!5m2!1sen!2shr" target=”_blank” >
+                        <img src="Slike/LocationIcon.svg" loading="lazy" alt="Lokacija reve ureda">
+                        
+                        <span>Roginina 6, Zagreb</span>
+                     </a>
+                </li>
+
+                <li>
+                    <a href="https://wa.me/+385916192520" target=”_blank”>
+                        <img src="Slike/PhoneIcon.svg" loading="lazy" alt="Broj mobitela">
+                        <span>+385 91 6192 520</span> 
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mailto:info@reve-dostava.com" target=”_blank”>
+                        <img src="Slike/MailIcon.svg" loading="lazy" alt="reve dostava email">
+                        <span>info@reve-dostava.com</span>   
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+
+
+    <div class="footer__bottom">
+        <div class="socials">
+            <a href="https://www.instagram.com/revedostava/?hl=en">
+                <img src="Slike/InstagramIcon.svg" loading="lazy" alt="instagram icon">
+            </a>
+            <a href="https://www.facebook.com/revedostavahr/">
+                <img src="Slike/FacebookIcon.svg" loading="lazy" alt="facebook icon">
+            </a>
+        </div>
+        <div class="copyright">
+            <span>© 2016 - 2022 Reve-dostava.com - All Rights Reserved.</span>
+        </div>
+
+    </div>
+
+
+</footer>
+
+
+<script src="lang.js"></script>
+
+</body>
+</html>
